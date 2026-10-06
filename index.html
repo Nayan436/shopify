@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopify Developer Roadmap · Oct–Dec 2026</title>
+<meta name="description" content="A 67-epic, sprint-by-sprint roadmap to becoming a job-ready Shopify developer, planned around Indian festival breaks.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232e6b4e'/%3E%3Cpath d='M20 44C20 28 32 20 44 20C44 34 36 44 20 44Z' fill='none' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf7;--card:#fff;--ink:#1c1e1b;--ink2:#3b3f39;--mute:#7b7f77;--line:#ebeae4;--line2:#f4f3ef;--acc:#2e6b4e;--acc2:#3f8a66;--accs:#eaf3ee;--amb:#b8732f;--ambs:#fbf1e5;--red:#b9473f;--reds:#fbecea;--blu:#3d5c9e;--blus:#eef2fa;--vio:#6b4fa3;--vios:#f3effa;--r:18px;--sh:0 1px 2px rgba(20,24,18,.04),0 10px 30px -16px rgba(20,24,18,.12)}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);font-size:14.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.serif{font-family:Fraunces,"Iowan Old Style",Georgia,serif}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+code{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:12px;background:var(--line2);border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:var(--ink2)}
+.wrap{max-width:1400px;margin:0 auto;padding:28px 28px 80px}
+a{color:var(--acc);text-decoration:none}
+/* header */
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.brand{display:flex;gap:14px;align-items:center}
+.mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#4c9a74,#1f4d38);position:relative;box-shadow:0 8px 18px -8px rgba(46,107,78,.7);flex:none}
+.mark:after{content:"";position:absolute;inset:13px;border:2px solid #fff;border-radius:50% 50% 50% 3px;transform:rotate(-45deg)}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:600}
+h1{font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-top:2px}
+.ctrls{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.fld{display:flex;flex-direction:column;gap:4px;font-size:11.5px;color:var(--mute);font-weight:500}
+.fld input,.fld select{font:inherit;font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:0 10px;height:38px;outline:none;transition:.15s}
+.fld input:focus,.fld select:focus{border-color:var(--acc2);box-shadow:0 0 0 3px var(--accs)}
+.btn{font:inherit;font-size:13.5px;font-weight:600;border:1px solid var(--acc);background:var(--acc);color:#fff;border-radius:10px;padding:0 15px;height:38px;cursor:pointer;transition:.18s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{background:#245a41;transform:translateY(-1px);box-shadow:0 6px 14px -8px rgba(46,107,78,.8)}
+.btn.sm{height:34px;padding:0 12px;font-size:13px}
+.btn.ghost{background:#fff;color:var(--ink2);border-color:var(--line)}
+.btn.ghost:hover{border-color:#d6d4cb;box-shadow:none}
+.btn.ghost.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.warn{background:var(--reds);color:var(--red);border-color:#efcdc9}
+.btn:disabled{opacity:.4;pointer-events:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+/* summary bar */
+.summary{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:14px 18px;margin-bottom:16px;flex-wrap:wrap}
+.sumL{display:flex;gap:16px;align-items:center;min-width:0;flex:1 1 380px}
+.ringS{position:relative;width:64px;height:64px;flex:none}
+.ringS svg{transform:rotate(-90deg)}
+.ringS circle{transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.2,1)}
+.ringS b{position:absolute;inset:0;display:grid;place-items:center;font-size:15px;font-weight:700}
+.sumT{min-width:0;flex:1}
+.sumT b{display:block;font-size:19px;font-weight:600;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.sumR{display:grid;grid-template-columns:repeat(4,minmax(110px,1fr));gap:10px;flex:1 1 520px}
+.ms{padding:10px 12px;border:1px solid var(--line2);border-radius:12px;background:#fcfcfa}
+.ms .k{font-size:11px;color:var(--mute);font-weight:600;letter-spacing:.03em}
+.ms .v{font-size:18px;font-weight:700;letter-spacing:-.02em;margin:1px 0 6px;line-height:1.2}
+.ms .v small{font-size:12px;color:var(--mute);font-weight:500;letter-spacing:0}
+.mbar{height:5px;background:var(--line2);border-radius:99px;overflow:hidden}
+.mbar i{display:block;height:100%;background:linear-gradient(90deg,var(--acc2),var(--acc));border-radius:99px;transition:width .6s}
+/* tabs */
+.tabs{display:inline-flex;gap:4px;padding:4px;background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:16px;box-shadow:var(--sh);flex-wrap:wrap}
+.tabs button{font:inherit;font-size:13.5px;font-weight:600;color:var(--mute);background:none;border:0;padding:8px 16px;border-radius:9px;cursor:pointer;transition:.18s}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{background:var(--ink);color:#fff}
+.pane{display:none}.pane.on{display:block;animation:fade .35s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* sprint rail */
+.rail{position:relative;display:flex;gap:8px;overflow-x:auto;padding:2px 2px 12px;margin-bottom:6px;scroll-behavior:smooth}
+.rail::-webkit-scrollbar{height:6px}.rail::-webkit-scrollbar-thumb{background:#dedcd4;border-radius:9px}
+.rchip{flex:0 0 196px;text-align:left;font:inherit;color:inherit;background:#fff;border:1px solid var(--line);border-top:3px solid var(--c);border-radius:14px;padding:10px 12px;cursor:pointer;display:grid;gap:4px;transition:.18s}
+.rchip:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.rchip.on{background:var(--s);border-color:var(--c)}
+.rchip .rt{display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;color:var(--c);letter-spacing:.06em}
+.rchip.cur .rt span:first-child:after{content:" · NOW";color:var(--amb)}
+.rchip b{font-size:12.5px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rchip .rd{font-size:11px;color:var(--mute)}
+.rchip .mbar{height:4px}.rchip .mbar i{background:var(--c)}
+/* home grid */
+.homeGrid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:16px;align-items:start}
+.calCard{padding:20px 20px 16px}
+.calHead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.mNav{display:flex;align-items:center;gap:10px}
+.mNav h2{font-size:26px;font-weight:600;letter-spacing:-.02em;min-width:220px;text-align:center}
+.iconBtn{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:20px;line-height:1;cursor:pointer;color:var(--ink2);transition:.15s;display:grid;place-items:center}
+.iconBtn:hover{border-color:var(--acc2);color:var(--acc)}
+.iconBtn:disabled{opacity:.3;pointer-events:none}
+.calTools{display:flex;gap:8px;flex-wrap:wrap}
+.hint{font-size:12px;color:var(--mute);margin:4px 0 12px;min-height:18px}
+.hint.active{color:var(--amb);font-weight:600}
+.mdow{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--line)}
+.mdow span{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:0 8px 8px}
+.wrow{position:relative}
+.wcells{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.mcell{min-height:128px;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:8px;position:relative;min-width:0;user-select:none;-webkit-user-select:none;transition:background .12s}
+.mcell:nth-child(7n){border-right:0}
+.mcell.out{background:repeating-linear-gradient(135deg,#fbfbf9,#fbfbf9 6px,#f6f6f2 6px,#f6f6f2 12px)}
+.mcell[data-k]{cursor:pointer}
+.mcell[data-k]:hover{background:#f8f8f3}
+.dn{font-size:12.5px;font-weight:600;color:var(--ink2);width:24px;height:24px;display:grid;place-items:center;border-radius:50%}
+.mcell.now .dn{background:var(--amb);color:#fff}
+.mcell.rest .dn{color:#b3b5ae}
+.mcell .ep{margin-top:28px;display:grid;gap:2px}
+.ec{font-family:"JetBrains Mono",monospace;font-size:10.5px;font-weight:600;color:var(--mute)}
+.et{font-size:12px;line-height:1.3;color:var(--ink);font-weight:500;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.mcell .mbar{height:3px;margin-top:4px}
+.mcell.s-done{background:#f4faf6}.mcell.s-done .ec:after{content:" ✓";color:var(--acc)}
+.mcell.s-late{background:#fdf6f5}.mcell.s-late .ec{color:var(--red)}
+.mcell.kp .ec:before{content:"★ ";color:var(--amb)}
+.mcell.kr .ec{color:var(--vio)}
+.mcell.hol{background:linear-gradient(160deg,#fdf5ea,#fbead5)}
+.mcell.hol .dn{color:#a8662a}
+.mcell .hn{margin-top:28px;font-size:12px;font-weight:600;color:#8a5420;line-height:1.3}
+.mcell .rn{margin-top:28px;font-size:11.5px;color:#b8bab3}
+.mcell.insel{background:rgba(63,138,102,.10)!important;box-shadow:inset 0 0 0 1px rgba(63,138,102,.35)}
+.mcell.pick{box-shadow:inset 0 0 0 2px var(--ink);background:#fff}
+.bar{position:absolute;top:36px;height:20px;font:inherit;font-size:11px;font-weight:600;color:var(--c);background:var(--s);border:0;padding:0 8px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;z-index:2;transition:.15s;line-height:20px}
+.bar.bs{border-top-left-radius:7px;border-bottom-left-radius:7px}
+.bar.be{border-top-right-radius:7px;border-bottom-right-radius:7px}
+.bar:hover{filter:brightness(.96)}
+.bar.on{background:var(--c);color:#fff}
+.bar b{font-family:"JetBrains Mono",monospace;margin-right:5px}
+.calFoot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:14px;align-items:flex-start}
+.lg{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--mute)}
+.lg span{display:flex;align-items:center;gap:6px}
+.lg i{width:11px;height:11px;border-radius:3px;display:inline-block;border:1px solid var(--line)}
+.brkList{display:flex;flex-wrap:wrap;gap:6px}
+.brkList span{font-size:11.5px;font-weight:500;padding:4px 10px;border-radius:99px;background:var(--ambs);color:#8a5420;border:1px solid #f0dcc4}
+.brkList span b{font-weight:700;margin-right:4px}
+/* side panel */
+.panel2{padding:24px 24px;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto}
+.panel2>*{animation:fade .3s ease both}
+.crumbs{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12.5px;color:var(--mute);margin-bottom:14px}
+.crumbs button{font:inherit;background:none;border:0;color:var(--acc);cursor:pointer;padding:2px 0;font-weight:600}
+.crumbs button:hover{text-decoration:underline}
+.crumbs .sep{color:var(--line)}
+.rStats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0 10px}
+.eList{display:grid;gap:8px}
+.eItem{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;text-align:left;font:inherit;color:inherit;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px;cursor:pointer;transition:.15s;width:100%}
+.eItem:hover{border-color:var(--acc2);transform:translateX(3px)}
+.eItem.s-done{background:#f7fbf8}
+.eItem.s-late{border-color:#f0d2ce}
+.eItem.s-today{border-color:var(--amb);box-shadow:0 0 0 2px var(--ambs)}
+.eDate{text-align:center;border-right:1px solid var(--line2);padding-right:10px;line-height:1.15}
+.eDate small{display:block;font-size:10px;color:var(--mute);text-transform:uppercase;font-weight:700;letter-spacing:.08em}
+.eDate b{font-size:20px;font-weight:600}
+.eMain{min-width:0}
+.eMain b{display:block;font-size:13.5px;line-height:1.3}
+.eMain span{font-size:11.5px;color:var(--mute)}
+.eSide{text-align:right;font-size:11.5px;color:var(--mute);font-weight:600;min-width:58px}
+.eSide .mbar{margin-top:5px;height:4px}
+.eItem.hol{background:linear-gradient(160deg,#fdf5ea,#fbead5);border-color:#f0dcc4;cursor:default}
+.eItem.hol:hover{transform:none}
+.eItem.hol .eMain b{color:#8a5420}
+.festCard{padding:22px;border-radius:16px;background:linear-gradient(150deg,#fdf3e6,#fbe4c9);border:1px solid #f0d6b5;margin-bottom:16px}
+.festCard h2{font-size:28px;color:#7a4a1c;font-weight:600;margin:4px 0 6px}
+.festCard p{color:#8a5420}
+.restCard{padding:22px;border-radius:16px;background:var(--line2);border:1px solid var(--line);margin-bottom:16px}
+.restCard h2{font-size:26px;font-weight:600;margin:4px 0 6px}
+.restCard p{color:var(--mute)}
+.pFoot{display:flex;justify-content:space-between;gap:8px;margin-top:18px;flex-wrap:wrap}
+/* epic detail (shared) */
+.dMeta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.tag{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:99px;background:var(--line2);color:var(--ink2);border:1px solid var(--line)}
+.tag.epic{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tag.k-build,.kd.k-build{background:var(--blus);color:var(--blu);border-color:#d8e1f3}
+.tag.k-project,.kd.k-project{background:var(--ambs);color:var(--amb);border-color:#f0dcc4}
+.tag.k-review,.kd.k-review{background:var(--vios);color:var(--vio);border-color:#e2d9f2}
+.tag.s-done{background:var(--accs);color:var(--acc);border-color:#cfe4d7}
+.tag.s-prog{background:var(--blus);color:var(--blu);border-color:#d8e1f3}
+.tag.s-today{background:var(--ambs);color:var(--amb);border-color:#f0dcc4}
+.tag.s-late{background:var(--reds);color:var(--red);border-color:#f0d2ce}
+.dDate{font-size:12.5px;color:var(--mute);width:100%}
+.eh2{font-size:28px;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.goal{color:var(--mute);font-size:14.5px;margin:8px 0 16px;max-width:720px}
+.dProg{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.dProg .mbar{flex:1;height:7px}
+.dProg span{font-size:12.5px;color:var(--mute);font-weight:500;white-space:nowrap}
+.dod{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(135deg,#f6faf7,#fff);border:1px dashed #cfe4d7;border-radius:14px;padding:13px 16px;font-size:13.5px}
+.dod b{color:var(--acc);font-size:11px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding-top:2px}
+.sec{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:700;margin:24px 0 12px;display:flex;align-items:center;gap:10px}
+.sec:after{content:"";flex:1;height:1px;background:var(--line)}
+.story{border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:12px;background:#fff;transition:.2s}
+.story:hover{border-color:#dcdad2}
+.story.full{border-color:#cfe4d7;background:linear-gradient(180deg,#fbfdfb,#fff)}
+.sHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+.sid{font-size:11.5px;font-weight:600;color:var(--blu);background:var(--blus);padding:3px 9px;border-radius:7px}
+.sPts{font-size:12px;color:var(--mute);font-weight:500}
+.sTxt{font-size:15px;line-height:1.5;color:var(--ink);margin-bottom:12px}
+.sTxt .kw{font-weight:700;color:var(--acc)}
+.ac{background:var(--line2);border-radius:12px;padding:11px 14px;margin-bottom:10px}
+.acT{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--mute);margin-bottom:5px}
+.ac ul{list-style:none;display:grid;gap:4px}
+.ac li{font-size:13px;color:var(--ink2);padding-left:20px;position:relative}
+.ac li:before{content:"";position:absolute;left:3px;top:6px;width:8px;height:5px;border-left:2px solid var(--acc2);border-bottom:2px solid var(--acc2);transform:rotate(-45deg)}
+.wRow{display:grid;grid-template-columns:24px 54px 1fr 46px;gap:10px;align-items:center;padding:9px 6px;border-top:1px solid var(--line2);cursor:pointer;border-radius:8px;transition:background .15s}
+.wRow:hover{background:#fafaf7}
+.wRow.head{cursor:default;border-top:0;padding-top:2px;padding-bottom:6px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--mute)}
+.wRow.head:hover{background:none}
+.wRow input,.stItem input{display:none}
+.chk{width:20px;height:20px;border-radius:7px;border:1.5px solid #cfcdc4;background:#fff;display:grid;place-items:center;transition:.18s;flex:none}
+.chk:after{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px);opacity:0;transition:.18s}
+input:checked+.chk{background:var(--acc2);border-color:var(--acc2)}
+input:checked+.chk:after{opacity:1}
+.wid{font-size:11px;color:var(--mute)}
+.wt{font-size:13.5px;color:var(--ink);transition:.2s}
+.wh{font-size:12px;color:var(--mute);text-align:right;font-weight:500}
+.wRow.done .wt{color:var(--mute);text-decoration:line-through;text-decoration-color:#c9c7bf}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel2 .two{grid-template-columns:1fr;gap:0}
+.res a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;font-size:13.5px;font-weight:500;color:var(--ink);transition:.15s}
+.res a:hover{border-color:var(--acc2);background:var(--accs)}
+.res a span{color:var(--mute);font-size:12px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+textarea{width:100%;min-height:120px;font:inherit;font-size:13.5px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;resize:vertical;outline:none;color:var(--ink);background:#fff;transition:.15s}
+textarea:focus{border-color:var(--acc2);box-shadow:0 0 0 3px var(--accs)}
+.saved{font-size:11.5px;color:var(--mute);margin-top:6px;height:16px}
+.dFoot{display:flex;justify-content:space-between;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line2);flex-wrap:wrap}
+/* roadmap tab */
+.road{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:16px}
+.phase{padding:18px;display:flex;flex-direction:column;gap:8px;border-top:3px solid var(--c)}
+.pHead{display:flex;justify-content:space-between;align-items:center}
+.pPct{font-size:12px;font-weight:700;color:var(--c);background:var(--s);padding:2px 9px;border-radius:99px}
+.phase h4{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+.phase p{font-size:12.5px;color:var(--mute);line-height:1.45}
+.wks{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.wk{font:inherit;color:inherit;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;transition:.18s;display:grid;gap:5px}
+.wk:hover{border-color:#d6d4cb;transform:translateX(2px)}
+.wk.on{border-color:var(--c);background:var(--s)}
+.wkTop{display:flex;justify-content:space-between;gap:8px;font-size:10.5px;color:var(--mute);font-weight:600;letter-spacing:.04em}
+.wk b{font-size:13px;font-weight:600;line-height:1.3}
+.wk .mbar{height:4px}.wk .mbar i{background:var(--c)}
+.main{display:grid;grid-template-columns:330px 1fr;gap:16px;align-items:start}
+.dayList{padding:10px;position:sticky;top:16px}
+.wkHead{padding:14px 12px 12px;border-bottom:1px solid var(--line2);margin-bottom:6px}
+.wkHead h3{font-size:18px;font-weight:600;letter-spacing:-.01em;margin:3px 0 4px}
+.wkHead p{font-size:12.5px;color:var(--mute);line-height:1.5}
+.out{display:inline-block;margin-top:9px;font-size:11.5px;font-weight:600;color:var(--acc);background:var(--accs);padding:3px 9px;border-radius:99px}
+.brk{display:block;margin-top:8px;font-size:11.5px;font-weight:600;color:var(--amb)}
+.dItem{display:flex;gap:12px;align-items:center;padding:11px 12px;border-radius:12px;cursor:pointer;transition:.15s}
+.dItem:hover{background:var(--line2)}
+.dItem.on{background:var(--accs)}
+.dNum{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-weight:700;font-size:13px;flex:none;background:var(--line2);color:var(--ink2);border:1px solid var(--line)}
+.dNum.done{background:var(--acc);color:#fff;border-color:var(--acc)}
+.dNum.prog{background:var(--accs);color:var(--acc);border-color:#cfe4d7}
+.dNum.today{background:var(--ambs);color:var(--amb);border:2px solid var(--amb)}
+.dNum.late{background:var(--reds);color:var(--red);border-color:#f0d2ce}
+.dInfo{min-width:0;flex:1}
+.dInfo b{display:block;font-size:13.5px;font-weight:600;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dInfo span{font-size:12px;color:var(--mute)}
+.kd{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:1px 6px;border-radius:5px;margin-left:4px}
+.dFrac{font-size:11.5px;color:var(--mute);font-weight:600;flex:none}
+.detail{padding:30px 32px;min-height:600px}
+/* self test + resources */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.panel{padding:26px 28px}
+.panel h2{font-size:22px;font-weight:600;letter-spacing:-.015em;margin:4px 0 6px}
+.panel>p{color:var(--mute);margin-bottom:16px}
+.stItem{display:flex;gap:14px;align-items:center;padding:12px 4px;border-top:1px solid var(--line2);cursor:pointer}
+.stItem .tx{flex:1;font-size:14px}
+.stItem.done .tx{color:var(--mute)}
+.stItem .lnk{font-size:11.5px;font-weight:600;color:var(--blu);background:var(--blus);padding:3px 9px;border-radius:99px;white-space:nowrap}
+.ready{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:13.5px;font-weight:500;background:var(--line2);color:var(--mute)}
+.ready.yes{background:var(--accs);color:var(--acc)}
+details{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;transition:.2s}
+details[open]{border-color:#cfe4d7;background:#fbfdfb}
+summary{cursor:pointer;font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--mute);font-weight:400;font-size:18px;line-height:1}
+details[open] summary:after{content:"–"}
+details .ans{margin-top:10px;font-size:13.5px;color:var(--ink2);line-height:1.6}
+details .ans p+p{margin-top:8px}
+.rList{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rList a{display:flex;flex-direction:column;padding:13px 15px;border:1px solid var(--line);border-radius:14px;transition:.15s;color:var(--ink)}
+.rList a:hover{border-color:var(--acc2);background:var(--accs);transform:translateY(-2px)}
+.rList a b{font-size:13.5px}
+.rList a span{font-size:12px;color:var(--mute)}
+.note{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line2);font-size:13.5px;color:var(--ink2)}
+.note i{flex:none;width:24px;height:24px;border-radius:8px;background:var(--ambs);color:var(--amb);display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:700}
+.cli{background:#fbfbf9;border:1px solid var(--line);border-radius:14px;padding:6px 0;margin-top:6px}
+.cli div{display:flex;justify-content:space-between;gap:12px;padding:9px 16px;font-size:12.5px;border-top:1px solid var(--line2)}
+.cli div:first-child{border-top:0}
+.cli code{background:none;border:0;padding:0;color:var(--acc)}
+.cli span{color:var(--mute);text-align:right}
+.loader{position:fixed;inset:0;background:var(--bg);display:grid;place-items:center;z-index:9;transition:opacity .3s}
+.loader div{width:34px;height:34px;border:3px solid var(--line);border-top-color:var(--acc2);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:1250px){.road{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1100px){.homeGrid{grid-template-columns:1fr}.panel2{position:static;max-height:none}.panel2 .two{grid-template-columns:1fr 1fr;gap:22px}}
+@media(max-width:920px){.main,.grid2,.two,.panel2 .two{grid-template-columns:1fr}.dayList{position:static}.road{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.wrap{padding:16px 12px 60px}.mcell{min-height:76px;padding:4px}.mcell .et,.mcell .hn,.mcell .rn,.mcell .mbar{display:none}.mcell .ep{margin-top:12px}.ec{font-size:9.5px}.bar{font-size:0;height:6px;top:30px;padding:0}.bar b{display:none}.mNav h2{font-size:20px;min-width:0}.sumR{grid-template-columns:repeat(2,1fr)}.calCard{padding:14px 8px}.mdow span{padding:0 4px 6px;font-size:9.5px;letter-spacing:.05em}.road,.rList{grid-template-columns:1fr}.panel,.panel2{padding:18px}.detail{padding:20px 16px}.eh2{font-size:23px}.wRow{grid-template-columns:22px 1fr 40px}.wid{display:none}.wRow.head span:nth-child(2){display:none}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="loader" id="loader"><div></div></div>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="mark"></div><div><div class="eyebrow">Zero to job-ready · Oct → Dec 2026</div><h1 class="serif">Shopify Developer Roadmap</h1></div></div>
+    <div class="ctrls">
+      <label class="fld"><span>Start date</span><input type="date" id="start"></label>
+      <label class="fld"><span>Study days</span><select id="mode"><option value="5">Mon – Fri</option><option value="6">Mon – Sat</option><option value="7">Every day</option></select></label>
+      <label class="fld"><span>Festival breaks</span><select id="hol"><option value="1">Observe</option><option value="0">Ignore</option></select></label>
+      <button class="btn ghost" id="exportBtn" title="Download your progress as a JSON file">Backup</button>
+      <button class="btn ghost" id="importBtn" title="Restore progress from a backup file">Restore</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+      <button class="btn ghost" id="reset">Reset progress</button>
+    </div>
+  </header>
+
+  <section class="card summary" id="summary"></section>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="home" class="on">Calendar</button>
+    <button data-tab="road">Roadmap</button>
+    <button data-tab="test">Self-test & Interview</button>
+    <button data-tab="res">Resources</button>
+  </nav>
+
+  <!-- HOME: calendar-first -->
+  <div class="pane on" id="pane-home">
+    <div class="rail" id="rail"></div>
+    <div class="homeGrid">
+      <div class="card calCard">
+        <div class="calHead">
+          <div class="mNav"><button class="iconBtn" id="mPrev" aria-label="Previous month">‹</button><h2 class="serif" id="mTitle"></h2><button class="iconBtn" id="mNext" aria-label="Next month">›</button></div>
+          <div class="calTools"><button class="btn ghost sm" id="mToday">Today</button><button class="btn ghost sm" id="rangeBtn">Select range</button></div>
+        </div>
+        <div class="hint" id="hint"></div>
+        <div class="mdow"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+        <div id="month"></div>
+        <div class="calFoot">
+          <div class="lg">
+            <span><i style="background:#f4faf6;border-color:#cfe4d7"></i>Completed</span>
+            <span><i style="background:var(--amb);border-color:var(--amb);border-radius:50%"></i>Today</span>
+            <span><i style="background:#fdf6f5;border-color:#f0d2ce"></i>Overdue</span>
+            <span><i style="background:#fbead5;border-color:#f0d6b5"></i>Festival</span>
+            <span>★ Project</span>
+          </div>
+          <div class="brkList" id="brkList"></div>
+        </div>
+      </div>
+      <aside class="card panel2" id="panel"></aside>
+    </div>
+  </div>
+
+  <!-- ROADMAP -->
+  <div class="pane" id="pane-road">
+    <section class="road" id="road"></section>
+    <section class="main">
+      <aside class="card dayList"><div class="wkHead" id="wkHead"></div><div id="days"></div></aside>
+      <article class="card detail" id="detail"></article>
+    </section>
+  </div>
+
+  <div class="pane" id="pane-test">
+    <div class="grid2">
+      <div class="card panel">
+        <div class="eyebrow">Final self-test</div>
+        <h2 class="serif">Can you do this alone?</h2>
+        <p>Tick an item only when you can do it from scratch without notes. Each links to the epic that prepares you for it.</p>
+        <div id="selfList"></div>
+        <div class="ready" id="ready"></div>
+      </div>
+      <div class="card panel">
+        <div class="eyebrow">Interview prep</div>
+        <h2 class="serif">Questions you'll be asked</h2>
+        <p>Answer out loud first, then open the hint to compare.</p>
+        <div id="qList"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane" id="pane-res">
+    <div class="grid2">
+      <div class="card panel">
+        <div class="eyebrow">Bookmarks</div>
+        <h2 class="serif">Resources</h2>
+        <p>Keep these pinned while you study.</p>
+        <div class="rList" id="rList"></div>
+      </div>
+      <div>
+        <div class="card panel" style="margin-bottom:16px">
+          <div class="eyebrow">Sandbox</div>
+          <h2 class="serif">Dev store notes</h2>
+          <div id="dsNotes" style="margin-top:10px"></div>
+        </div>
+        <div class="card panel">
+          <div class="eyebrow">Cheat sheet</div>
+          <h2 class="serif">Shopify CLI essentials</h2>
+          <div class="cli" id="cli"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ PLAN (compact format) ============
+@ phase | description
+# sprint | goal | outcome
+## epic title
+k: learn|build|project|review   g: goal   d: definition of done   r: resource keys
+> user story   + acceptance criterion   - WBS task ~hours      ^code^ = inline code */
+const PLAN=`
+@ Foundations | The platform from the merchant's side, then your first Liquid and CLI.
+# Platform & Store Admin | Set up a complete dev store: catalog, shipping, COD, discounts and markets. | Self-test #1
+## Dev store, products & collections
+g: Spin up your sandbox and build a realistic catalog so every theme you build has real data.
+d: Dev store live with 15+ products in 3+ collections.
+r: partners help dev
+> As a learner, I want a Partner account and a development store, so that I have a free sandbox to build in.
++ Partner account verified and dev store created
++ Can explain theme vs app vs checkout in two sentences each
+- Sign up for Shopify Partners and create a development store ~0.5
+- Tour the admin: Products, Orders, Customers, Content, Online Store, Settings ~0.75
+- Skim shopify.dev: Storefronts, Apps and APIs sections ~0.5
+> As a store admin, I want realistic products in collections, so that the storefront has real data to design against.
++ 3+ products with size/colour variants; images, compare-at, SKU, inventory set
++ 1 manual + 2 automated collections
+- Create products with options and variants ~0.75
+- Bulk-import products from the sample CSV ~0.5
+- Create manual and automated collections (tag, price, type rules) ~0.5
+## Shipping, payments, taxes & COD
+g: Configure how money and parcels move — the basics every Indian D2C store needs.
+d: Two successful test orders: one COD, one via Bogus Gateway.
+r: help
+> As a merchant in India, I want shipping zones and rates, so that checkout calculates delivery correctly.
++ Flat rate + free shipping over a threshold
++ Weight-based rate tested at checkout
+- Review the general shipping profile and zones ~0.5
+- Add a flat rate, free shipping above ₹999 and a weight-based rate ~0.5
+- Set package sizes and product weights ~0.25
+> As a shopper, I want Cash on Delivery and test card payments, so that I can place test orders.
++ COD enabled as a manual payment method
++ Bogus Gateway order succeeds
+- Enable COD under Settings → Payments → Manual payment methods ~0.25
+- Enable Bogus Gateway and place a test order ~0.5
+- Review taxes (tax-inclusive pricing) and checkout settings ~0.5
+## Discounts, customers & orders
+g: Learn the promo engine and the order lifecycle merchants live in every day.
+d: Promo matrix (what stacks with what) + order lifecycle notes. Self-test #1 ✓
+r: help
+> As a marketer, I want discount codes and automatic discounts, so that I can run promotions.
++ % code, fixed code, automatic Buy X Get Y and free-shipping discount created
++ Combination rules tested
+- Create a % off code and a fixed-amount code ~0.5
+- Create an automatic Buy X Get Y discount ~0.5
+- Create a free-shipping discount with a minimum order ~0.25
+- Test combinations at checkout and record a promo matrix ~0.5
+> As an operations person, I want to handle orders end to end, so that I understand fulfilment.
++ Fulfilled, refunded, cancelled and draft orders exist
+- Fulfil an order and add tracking ~0.25
+- Refund, cancel and read the order timeline ~0.5
+- Create a draft order and a tagged customer ~0.5
+## Online Store setup & the theme editor
+g: Finish the storefront basics and learn exactly what merchants can do without code.
+d: Menus, pages, a blog and a customised Horizon theme.
+r: help horizon
+> As a merchant, I want navigation, pages and a blog, so that the store feels complete.
++ Nested main menu + footer menu
++ About, Contact, FAQ pages and one blog post
+- Build nested main and footer menus ~0.5
+- Create About, Contact, FAQ pages and a blog post ~0.75
+- Set store password, SEO title/description and social sharing image ~0.25
+> As a theme developer, I want to master the theme editor, so that I know what merchants expect to control.
++ Edited colour schemes, fonts, header, sections and blocks
++ Can explain templates vs sections vs blocks from the editor
+- Install Horizon (or Dawn) and customise every homepage section ~1
+- Create an alternate product template in the editor ~0.5
+## Markets, currencies & languages
+g: Sell beyond one country and language — a frequent client request.
+d: Store with 2 markets, 2 currencies and a translated storefront.
+r: help
+> As an international merchant, I want markets with local currencies, so that overseas buyers see familiar prices.
++ India + one international market configured
++ Currency selector visible on the storefront
+- Set up Markets: domestic + international ~0.75
+- Configure currency conversion and rounding ~0.25
+- Enable a country/currency selector in the theme ~0.25
+> As a non-English shopper, I want the store in my language, so that I trust it.
++ Second language published and translated
+- Add a language and install Translate & Adapt ~0.5
+- Translate theme content and one product ~0.5
+- Note how locale URLs (^/hi/^, ^/en-us/^) work ~0.25
+# Merchant Tools & First Code | Apps, SEO, the project brief — then theme architecture, Liquid and the CLI. | Self-test #2 · Project brief
+## Apps, SEO & analytics
+g: Learn which problems apps solve and how Shopify handles SEO and tracking.
+d: App comparison note + SEO checklist for the project store.
+r: ext help pixels
+> As a merchant, I want apps for reviews, wishlists and email, so that I can extend my store without custom code.
++ 2 free apps installed; each app's block or embed located
++ Can list how apps touch a theme: app blocks, embeds, script tags, app proxies
+- Install a reviews app and place its app block ~0.5
+- Enable a wishlist app embed; inspect injected scripts in page source ~0.5
+- Uninstall one app and verify no leftover theme code ~0.25
+> As a marketer, I want solid SEO and analytics, so that I can grow and measure traffic.
++ Titles, descriptions, alt text and handles reviewed; 3 redirects created
++ Customer events and analytics reports explored
+- Review URL structure, canonicals and ^sitemap.xml^; add redirects ~0.75
+- Read about ^robots.txt.liquid^ and structured data ~0.5
+- Explore Analytics, Live View and Settings → Customer events ~0.5
+## Project: the Saffron Loom brief
+k: project
+g: Start your running portfolio project — a fictional handloom textile brand you'll build until December.
+d: Brand brief, feature list and a fully configured Saffron Loom store.
+r: help
+> As the Saffron Loom client, I want a clear project brief, so that the developer builds what the brand needs.
++ Brief: audience, pages, features, brand colours and fonts
++ Feature list prioritised (must / should / could)
+- Write a one-page brief and MoSCoW feature list ~0.75
+- Pick a palette and two fonts; collect product images ~0.75
+> As the developer, I want the store fully configured, so that theme work can start.
++ 20 products, 5 collections, menus, pages, shipping, COD
+- Import a themed catalog: sarees, dupattas, stoles, home linen ~1
+- Configure collections, menus and pages for the brand ~0.75
+## Theme architecture (Online Store 2.0)
+g: Know every folder's job so you can find the right file in seconds.
+d: A diagram of how a page renders, from layout to blocks.
+r: arch horizon dawn
+> As a theme developer, I want to know what each theme folder does, so that I can find the right file fast.
++ Explains layout, templates, sections, blocks, snippets, assets, config, locales
++ Knows JSON templates vs Liquid templates
+- Read the Theme architecture docs ~1
+- Download the theme code and map every folder ~0.5
+- Diagram: ^layout/theme.liquid^ → JSON template → sections → blocks ~0.5
+> As a learner, I want to read production theme code, so that I absorb good patterns.
++ Traced the product page render end to end
+- Follow ^templates/product.json^ through each section file ~1
+- Note 5 patterns worth copying ~0.5
+## Liquid fundamentals
+g: Learn Liquid's syntax quickly — your HTML/JS background makes this fast.
+d: A practice snippet using loops, conditionals and 15+ filters.
+r: liquid
+> As a developer, I want to use Liquid objects, tags and filters, so that I can output dynamic store data.
++ Output vs logic tags used correctly
++ if / unless / case / for / assign / capture used
++ 15+ filters used confidently
+- Read the Liquid reference: objects, tags, filters ~1
+- Loop ^collections.all.products^ with ^limit^, ^offset^ and ^forloop^ ~0.75
+- Practise string, math, money, date and URL filters ~0.75
+> As a developer, I want clean output and scope, so that markup is predictable.
++ Whitespace control used
++ ^render^ vs deprecated ^include^ understood
+- Learn whitespace control and the ^liquid^ tag ~0.25
+- Practise ^render^ with parameters and ^for^ ~0.5
+## Shopify CLI & Git workflow
+g: Develop locally with hot reload, version everything, and never touch the live theme by accident.
+d: CLI cheat sheet + GitHub repo connected to a store theme. Self-test #2 ✓
+r: cli github
+> As a developer, I want to pull, preview and push safely with the CLI, so that I never break the live theme.
++ ^theme dev^ running with hot reload
++ Changes pushed to a NEW unpublished theme
+- Install Node.js LTS, Git and Shopify CLI ~0.5
+- ^shopify theme pull^, then ^shopify theme dev^ and watch hot reload ~0.75
+- ^shopify theme push --unpublished^ and run ^shopify theme check^ ~0.5
+> As a team member, I want the theme in Git and synced via GitHub, so that every change is tracked and reversible.
++ Repo on GitHub; a branch connected to a theme
+- Init the repo, commit, push and open a PR from a feature branch ~0.75
+- Connect a branch via Online Store → Themes → GitHub ~0.5
+- Learn why ^settings_data.json^ causes merge conflicts ~0.25
+## Review: foundations checkpoint
+k: review
+g: Catch up on anything unfinished from Sprints 1–2 and lock in what you learned.
+d: Zero open tasks from Sprints 1–2; self-tests #1 and #2 attempted alone.
+r: dev
+> As a learner, I want to close every open task, so that gaps don't compound later.
++ Every earlier epic complete or consciously skipped
+- Finish any incomplete work packages from Sprints 1–2 ~1.5
+> As a learner, I want to test my memory, so that knowledge sticks.
++ Self-tests #1 and #2 attempted without notes
+- Re-do a dev store setup from memory (timed) ~0.75
+- Write 10 flashcard questions from your notes ~0.5
+@ Theme Development Core | Templates, sections and blocks — the daily bread of the job.
+# Templates in Depth | Build product, collection, cart and content templates by hand. | Self-test #3
+## Liquid global objects & logic
+g: Use the objects available on every page to build context-aware templates.
+d: A debug snippet printing template, request and shop context.
+r: liquid
+> As a developer, I want to use global objects, so that I can render content based on page context.
++ Uses shop, settings, request, routes, template and customer
+- Build a debug snippet printing ^template.name^, ^request.page_type^, ^request.locale^ ~0.75
+- Use ^routes^ for every URL instead of hard-coding ~0.5
+- Show content only to logged-in or tagged customers ~0.5
+> As a developer, I want strong Liquid logic, so that complex conditions stay readable.
++ Uses ^where^, ^map^, ^sort^ and ^sum^ array filters
+- Practise array filters on product and collection data ~0.75
+- Refactor a messy condition with the ^liquid^ tag ~0.5
+## Product template deep dive
+g: Understand the product object and the product form inside out.
+d: A hand-built product form on an alternate product template.
+r: liquid
+> As a shopper, I want a clear product page, so that I can choose a variant and buy.
++ Title, price, compare-at price and availability rendered
++ Add to cart via ^{% form 'product' %}^
+- Study ^product^, ^variant^ and ^selected_or_first_available_variant^ ~1
+- Build a minimal product form with variant select and quantity ~1
+> As a merchant, I want sale and stock badges, so that value and urgency are visible.
++ Sale badge, sold-out state and low-stock message
+- Show Sale % when compare-at > price ~0.25
+- Show sold out / low stock using inventory data ~0.5
+## Variant picker with JavaScript
+k: build
+g: Replace the select with swatches that update everything without reload — a classic interview task.
+d: Swatch picker updating price, image, URL and button state. Self-test #3 ✓
+r: liquid mdn
+> As a shopper, I want swatches instead of a dropdown, so that choosing colour and size is quick.
++ Option buttons per option name
++ Unavailable combinations disabled
+- Render options with ^product.options_with_values^ ~0.75
+- Output variants as JSON for JavaScript ~0.25
+- Match selected options to a variant in JS ~1
+> As a shopper, I want the page to update instantly, so that I always see the right price and image.
++ Price, image, add-to-cart button and ^?variant=^ URL update
+- Update price and button state on change ~0.5
+- Swap featured media and update the URL with ^history.replaceState^ ~0.5
+## Collection templates: pagination & sorting
+g: Build collection pages that stay fast with big catalogs.
+d: Paginated, sortable collection with a banner and product grid.
+r: liquid
+> As a shopper, I want paginated, sortable collections, so that big catalogs stay fast.
++ ^{% paginate %}^ with 12 per page and numbered links
++ Sort dropdown from ^collection.sort_options^
+- Implement pagination with ^paginate^ ~0.75
+- Build a custom numbered pagination snippet ~0.5
+- Add a sort-by dropdown ~0.5
+> As a merchant, I want a collection banner and grid, so that each collection feels curated.
++ Banner with image, title and description
++ Responsive grid with a columns setting
+- Render collection image and description ~0.5
+- Build a responsive product grid with CSS grid ~0.5
+- Build the ^list-collections^ template ~0.25
+## Cart, search & content templates
+g: Build the server-rendered cart and every remaining template a theme must handle.
+d: Working cart page plus styled search, blog, contact and 404 templates.
+r: liquid cart
+> As a shopper, I want a cart page to review and edit my order, so that I can check out confidently.
++ Line items, quantity inputs, remove links, note and subtotal
++ Line-item property (gift message) shown in cart
+- Loop ^cart.items^ with quantity inputs and remove links ~1
+- Add a cart note, a cart attribute and a line-item property ~0.75
+> As a shopper, I want search, blog and contact pages, so that I can find products and get in touch.
++ search, blog, article, contact and 404 templates styled
+- Build search results with ^search.results^ ~0.5
+- Style blog/article templates and a 404 page ~0.5
+- Build ^page.contact.json^ with the contact form tag ~0.5
+# Sections, Blocks & Settings | Make everything merchant-editable with schemas, blocks and settings. | Self-test #4
+## Your first custom section
+g: Turn markup into something a merchant can add, edit and reuse from the editor.
+d: A working hero-banner section under 'Add section'.
+r: sections
+> As a merchant, I want a section I can add from the theme editor, so that I can build pages without code.
++ ^sections/hero-banner.liquid^ with a schema
++ Settings: heading, text, image_picker, url, color
++ Appears under Add section
+- Read the Sections and section schema docs ~0.75
+- Build hero-banner markup and scoped CSS ~1
+- Add schema settings and a preset ~0.75
+> As a developer, I want the section to behave when settings are empty, so that it never looks broken.
++ Blank image/text handled with a placeholder
+- Add blank checks and ^placeholder_svg_tag^ fallbacks ~0.5
+## Blocks, presets & app blocks
+g: Let merchants add, remove and reorder content inside your sections.
+d: A section with 2 block types and default presets. Self-test #4 ✓
+r: blocks horizon
+> As a merchant, I want repeatable blocks, so that I can add and reorder items freely.
++ Section with 2+ block types and ^max_blocks^
++ ^block.shopify_attributes^ output on each block
+- Add a blocks array with block-level settings ~1
+- Loop ^section.blocks^ with ^case block.type^ ~0.5
+- Output ^block.shopify_attributes^ for editor selection ~0.25
+> As a merchant, I want sensible defaults and app support, so that the section looks good instantly and works with apps.
++ Preset ships with default blocks
++ Accepts the '@app' block type
+- Write presets with default blocks ~0.5
+- Add the '@app' block type and render app blocks ~0.5
+## Theme blocks & nested blocks
+g: Learn the newer Horizon-style architecture where blocks live in their own files and can nest.
+d: A section built from reusable theme blocks with nesting.
+r: blocks horizon
+> As a developer, I want reusable theme blocks, so that blocks can be shared across sections.
++ Blocks in the ^/blocks^ folder used by 2 sections
++ ^{% content_for 'blocks' %}^ renders them
+- Study Horizon's ^/blocks^ folder and one section using it ~1
+- Create two theme blocks (heading, button) ~0.75
+> As a merchant, I want to nest blocks inside a group, so that I can build flexible layouts.
++ A group block containing child blocks
++ A static block rendered with ^content_for 'block'^
+- Build a group block that accepts nested blocks ~0.75
+- Add a static block to a section ~0.5
+## Settings, colour schemes & translations
+g: Give merchants brand control and make every string translatable.
+d: Settings wired to CSS variables; zero hard-coded strings.
+r: settings liquid
+> As a merchant, I want global colours, fonts and colour schemes, so that branding is consistent everywhere.
++ Settings in ^config/settings_schema.json^ output as CSS variables
++ Colour scheme setting per section
+- Add colour, ^font_picker^ and range settings mapped to ^:root^ ~1
+- Add a colour scheme group and a per-section ^color_scheme^ ~0.75
+> As a merchant selling in two languages, I want translatable strings, so that the theme works in every locale.
++ Storefront strings use the ^t^ filter; schema labels use ^t:^ keys
+- Move strings into ^locales/en.default.json^ with interpolation ~0.75
+- Move schema labels into ^en.default.schema.json^ ~0.5
+## Hero slideshow with an accessible carousel
+k: build
+g: Build the most common homepage section properly — accessible, responsive and editor-friendly.
+d: Slideshow with autoplay, dots, arrows and keyboard support.
+r: sections mdn
+> As a merchant, I want a slideshow with slide blocks, so that I can feature campaigns.
++ Slide block: desktop + mobile image, heading, text, button
++ Settings: autoplay, speed, height
+- Build the section schema with slide blocks ~0.75
+- Art-direct desktop/mobile images with ^picture^ ~0.5
+- Build CSS scroll-snap slides ~0.5
+> As a keyboard or screen-reader user, I want an accessible carousel, so that I can use it too.
++ Pause button, arrow keys, ARIA labels, reduced motion respected
+- Write a ^slide-show^ custom element with arrows and dots ~1
+- Add a pause control and ^prefers-reduced-motion^ handling ~0.5
+## Featured collection & product card system
+k: build
+g: Create one product card snippet used everywhere — consistency is a senior habit.
+d: product-card snippet + featured collection slider section.
+r: sections liquid
+> As a merchant, I want a featured collection slider, so that I can highlight products.
++ Collection, limit and desktop/mobile column settings
+- Build the featured-collection section and settings ~1
+- Add horizontal scroll with arrows on desktop ~0.5
+> As a developer, I want a single product-card snippet, so that cards look the same everywhere.
++ Card shows image, hover image, title, price and badges
++ Used in collection grid, search and featured collection
+- Build ^snippets/product-card.liquid^ with parameters ~1
+- Replace all grid markup with the snippet ~0.5
+# Section Lab & Homepage | Header, footer, forms — then ship the homepage before Diwali. | Homepage v0.1
+## Header & mega menu
+k: build
+g: Build a header that handles nested menus, mobile drawers and sticky behaviour.
+d: Header with mega menu, mobile drawer, search and cart icons.
+r: liquid a11y
+> As a shopper, I want a clear mega menu, so that I can browse categories quickly.
++ 3-level menu from a menu setting
++ Featured image block inside the mega menu
+- Loop ^section.settings.menu.links^ and nested ^link.links^ ~1
+- Build a mega menu panel with image blocks ~0.75
+> As a mobile shopper, I want a slide-out menu, so that navigation works on small screens.
++ Mobile drawer with accordions and focus trap
++ Sticky header on scroll
+- Build the mobile drawer with ^details^ / ^summary^ ~0.75
+- Add a sticky header with IntersectionObserver ~0.5
+## Footer, newsletter & native forms
+k: build
+g: Build the footer and the native Shopify forms you'll meet on every project.
+d: Footer with menus, newsletter, social links and a localization form.
+r: liquid
+> As a merchant, I want a flexible footer, so that I can show menus, text and social links.
++ Footer blocks: menu, text, newsletter, social
+- Build the footer section with blocks ~1
+- Add social icons from global settings ~0.25
+> As a shopper, I want to subscribe to the newsletter, so that I hear about new drops.
++ ^{% form 'customer' %}^ creates a subscribed customer
++ Success and error states shown
+- Build the newsletter form with success/error handling ~0.5
+- Verify the customer appears in admin with marketing consent ~0.25
+- Add a localization form (country/language selector) ~0.5
+## Project: Saffron Loom homepage v0.1
+k: project
+g: Assemble everything into the first real deliverable for your running project.
+d: Homepage v0.1 on an unpublished theme + a 1-minute walkthrough video.
+r: cli github
+> As the Saffron Loom client, I want a homepage that reflects my brand, so that visitors trust and explore it.
++ Header, hero, featured collection, story, testimonials, footer
++ Matches brief colours and fonts
+- Assemble the homepage in the editor from your sections ~1
+- Build a testimonials section with rating blocks ~0.75
+- Mobile QA at 360, 390 and 768 px ~0.5
+> As the developer, I want a clean release, so that the client can review safely.
++ Pushed unpublished and tagged in Git
+- Run Theme Check, fix issues, tag ^v0.1^ ~0.5
+- Share the preview link and record a 1-minute walkthrough ~0.25
+## Review: pre-Diwali checkpoint
+k: review
+g: Wrap up the theme core before the festival break so you return with a clean slate.
+d: All Sprint 3–5 tasks closed; self-tests #3 and #4 attempted alone.
+r: liquid
+> As a learner, I want to close every open task before the break, so that I return with a clean slate.
++ All Sprint 3–5 epics complete
+- Finish any incomplete work packages from Sprints 3–5 ~1.5
+> As a learner, I want to rebuild from memory, so that I know the skills are mine.
++ Timed rebuild done
+- Rebuild a section with blocks and presets in 45 minutes ~0.75
+- Note 3 optional light-reading topics for the break ~0.25
+@ Advanced Storefront | Custom data, JavaScript, cart, search, quality and speed.
+# Media & Custom Data | Rich media plus custom data that merchants can edit. | Self-test #5
+## Images, video & media galleries
+g: Ship media that is sharp on retina yet light on 4G.
+d: Product media gallery with images, video and zoom.
+r: liquid perf
+> As a shopper on mobile, I want fast, sharp images, so that pages load quickly.
++ ^image_url^ + ^image_tag^ with widths and sizes everywhere
++ Lazy below the fold, eager + high priority for the LCP image
+- Replace raw img tags with ^image_url | image_tag^ ~0.75
+- Set ^loading^, ^fetchpriority^ and ^sizes^ correctly ~0.5
+> As a shopper, I want a rich product gallery, so that I can inspect products closely.
++ Gallery handles images, video and 3D models
++ Thumbnails and click-to-zoom on desktop
+- Loop ^product.media^ by ^media_type^ ~0.75
+- Use ^media_tag^, ^video_tag^ and ^model_viewer_tag^ ~0.5
+- Add thumbnail navigation and zoom ~0.75
+## Metafields & dynamic sources
+g: Extend products with merchant-editable custom data and connect it without code.
+d: Fabric, care and origin specs + related products on the product page.
+r: custom
+> As a merchant, I want extra product fields like fabric and care, so that pages carry richer info.
++ Definitions with proper types; values on 5 products
++ Rendered via ^.value^ / ^metafield_tag^, hidden when empty
+- Create definitions in Settings → Custom data; fill 5 products ~0.75
+- Output metafields in Liquid with blank checks ~0.75
+- Connect a section setting to a metafield via dynamic source ~0.5
+> As a developer, I want list and reference metafields, so that I can relate products and files.
++ Related products via a product-reference list; PDF via file reference
+- Create a list product-reference metafield and render cards ~0.75
+- Render a downloadable care-guide PDF from a file reference ~0.5
+## Metaobjects
+g: Model reusable structured content: size charts, FAQs, artisans.
+d: Size chart and Artisans page rendered from metaobjects. Self-test #5 ✓
+r: custom
+> As a merchant, I want a reusable Size Chart content type, so that I update it once for many products.
++ Metaobject definition with fields and 2 entries
++ Products reference it via a metafield
+- Create the definition and two entries ~0.75
+- Link products with a metaobject-reference metafield ~0.5
+- Render the size chart in a modal ~1
+> As a merchant, I want an Artisans page powered by metaobjects, so that brand stories stay structured.
++ Entries looped on a page section
+- Loop ^shop.metaobjects.artisan.values^ in a section ~0.75
+- Enable metaobject web pages for each artisan ~0.5
+# Custom Data & JavaScript | Ship the PDP, then modern theme JS and a full AJAX cart. | Self-test #6 · PDP v0.2
+## Project: Saffron Loom product page v0.2
+k: project
+g: Turn the product page into a premium, data-driven experience.
+d: PDP with gallery, specs, size chart, care guide and recommendations.
+r: custom recs
+> As the client, I want a premium product page, so that conversion improves.
++ Gallery, specs tab, size chart modal, care guide, related products
+- Assemble PDP sections from this sprint's work ~1.25
+- Add recommendations via ^/recommendations/products^ ~0.75
+> As a candidate, I want to document my decisions, so that I can discuss them in interviews.
++ STAR write-up: problem, approach, trade-off
+- Mobile QA and Theme Check ~0.5
+- Write a STAR note and tag ^v0.2^ ~0.5
+## Theme JavaScript architecture
+g: Organise theme JavaScript the way modern Shopify themes do.
+d: Two custom elements and a tiny pub/sub event bus.
+r: horizon mdn
+> As a developer, I want a modular JS pattern, so that components stay independent and fast.
++ Components written as custom elements
++ Scripts deferred and loaded only where needed
+- Study how Horizon/Dawn structure their JS ~0.75
+- Build a ^quantity-input^ custom element ~0.75
+- Load scripts with ^defer^ and ^asset_url^ per section ~0.25
+> As a developer, I want components to talk without coupling, so that features compose cleanly.
++ Cart updates broadcast with a pub/sub or CustomEvent
+- Build a small pub/sub module ~0.5
+- Re-initialise components on ^shopify:section:load^ in the editor ~0.5
+## Section Rendering & Recommendations APIs
+g: Fetch server-rendered HTML instead of rebuilding markup in JavaScript.
+d: Collection sorting and pagination without page reloads.
+r: srapi recs
+> As a shopper, I want sorting and paging without reloads, so that browsing feels instant.
++ Fetches ^?section_id=^ and swaps the grid HTML
++ URL updated; back button works
+- Fetch a section with ^?section_id=^ and replace markup ~1
+- Sync URL with ^history.pushState^ and handle ^popstate^ ~0.75
+> As a merchant, I want complementary product suggestions, so that average order value increases.
++ Complementary products from Search & Discovery shown
+- Configure complementary products in Search & Discovery ~0.25
+- Fetch ^intent=complementary^ recommendations ~0.5
+## Cart AJAX API
+g: Master the endpoints behind every add-to-cart button.
+d: Add, update and remove items without page reloads.
+r: cart
+> As a shopper, I want to add to cart without leaving the page, so that shopping feels smooth.
++ POST ^/cart/add.js^ with variant id and quantity
++ Errors like sold-out shown nicely
+- Read the Cart API reference ~0.5
+- Intercept the product form and POST ^/cart/add.js^ with fetch ~1
+- Handle 422 error responses ~0.25
+> As a shopper, I want to update or remove items, so that I stay in control of my cart.
++ ^/cart/change.js^ updates by line key
++ Cart count updated from ^/cart.js^
+- Implement quantity change and remove ~0.75
+- Read ^/cart.js^ and update the cart-count bubble ~0.5
+## Build a cart drawer
+k: build
+g: Ship the single most-requested theme feature in Shopify interviews.
+d: Accessible cart drawer driven by the Cart API. Self-test #6 ✓
+r: cart srapi
+> As a shopper, I want a slide-out cart drawer, so that I can review my cart instantly.
++ Opens on add to cart
++ Line items, quantity steppers, subtotal and checkout button
++ Re-renders via bundled sections
+- Build the drawer markup as a section ~1
+- Re-render the drawer using the ^sections^ param on add/change ~1
+- Focus trap, Esc to close and overlay click ~0.5
+> As a shopper, I want the drawer to stay in sync everywhere, so that I never see stale totals.
++ Count bubble and drawer update together; buttons disabled during requests
+- Publish a cart-updated event and subscribe in the header ~0.5
+## Quick add, upsells & free-shipping bar
+k: build
+g: Add the conversion features clients ask for most.
+d: Quick-add modal, cart upsell and free-shipping progress bar.
+r: cart srapi
+> As a shopper, I want quick add from collection pages, so that I can shop without opening each product.
++ Quick-add modal with variant picker
+- Fetch the product section into a ^dialog^ ~1
+- Reuse your variant picker inside the modal ~0.5
+> As a merchant, I want upsells and a free-shipping bar, so that average order value increases.
++ Progress bar computed from ^cart.total_price^
++ One-click upsell product in the drawer
+- Build the free-shipping progress bar ~0.5
+- Add an upsell block driven by a product setting ~0.75
+# Search, Quality & Speed | Help shoppers find things, then make the store fast and inclusive. | Self-test #7 & #8
+## Filtering & predictive search
+g: Help shoppers find things fast — on collection pages and as they type.
+d: Storefront filters + accessible predictive search.
+r: filtering predictive
+> As a shopper, I want filters on collection pages, so that I can narrow by price, size and colour.
++ Search & Discovery filters rendered from ^collection.filters^
++ Active filter pills; applied without reload
+- Configure Search & Discovery filters (incl. metafields) ~0.5
+- Render list + price-range filters and active pills ~1
+- Apply filters via your section-rendering fetch ~0.5
+> As a shopper, I want suggestions as I type, so that I find products faster.
++ ^/search/suggest^ with debounce and arrow-key navigation
+- Build a ^predictive-search^ custom element with debounce ~1
+- Add combobox ARIA and arrow-key navigation ~0.5
+## Debugging with DevTools
+g: Find and fix layout and JS bugs quickly — interviewers test this live.
+d: One mobile bug + one JS bug fixed and written up. Self-test #7 ✓
+r: mdn
+> As a developer, I want to debug mobile layout issues, so that the store works on every phone.
++ Fixed an overflow bug using device mode and the inspector
+- Device toolbar: test 360, 390 and 768 px widths ~0.5
+- Find horizontal overflow and fix it ~0.5
+- Use Computed and Layout panels (grid/flex overlays) ~0.5
+> As a developer, I want to debug JS and network calls, so that I find bugs fast.
++ Used breakpoints, console and the Network tab on cart requests
+- Set breakpoints in Sources and step through cart code ~0.5
+- Inspect ^/cart/add.js^ requests in the Network tab ~0.5
+- Profile Liquid with Shopify Theme Inspector for Chrome ~0.5
+## Performance & Core Web Vitals
+g: Make the theme fast — and be able to explain exactly how.
+d: Before/after Lighthouse scores recorded. Self-test #8 ✓
+r: perf vitals
+> As a merchant, I want a fast theme, so that SEO and conversion improve.
++ Lighthouse mobile before/after recorded
++ LCP, CLS and INP understood
+- Run Lighthouse and PageSpeed Insights; note Core Web Vitals ~0.5
+- Fix LCP: preload the hero, correct image sizes ~0.75
+- Fix CLS: reserve space with ^aspect-ratio^ ~0.5
+> As a developer, I want lean CSS and JS, so that the main thread stays free.
++ Unused code removed; Theme Check performance warnings fixed
+- Use the Coverage tab to find unused CSS/JS ~0.5
+- Defer non-critical JS and trim render-blocking CSS ~0.5
+- Audit app scripts and their cost ~0.25
+## Accessibility & Theme Store standards
+g: Build for everyone — and learn the bar Shopify sets for public themes.
+d: Accessibility audit report with fixes.
+r: a11y wcag themestore
+> As a shopper using assistive tech, I want an accessible store, so that I can use it fully.
++ Keyboard-only journey from home to checkout works
++ Contrast, alt text, labels and focus states pass
+- Run Lighthouse/axe accessibility audits ~0.5
+- Keyboard-test header, drawer, modals and forms ~0.75
+- Fix focus states, labels and alt text ~0.5
+> As a developer, I want to know Theme Store requirements, so that my work meets professional standards.
++ Theme scored against the requirements
+- Read the Theme Store requirements ~0.5
+- Score your theme in a checklist ~0.25
+## Review: storefront checkpoint
+k: review
+g: Close out the advanced storefront work and harden the Saffron Loom theme.
+d: All Sprint 6–8 tasks closed; theme tagged v0.3.
+r: perf
+> As a learner, I want to close every open task, so that nothing carries into the tooling sprint.
++ All Sprint 6–8 epics complete
+- Finish any incomplete work packages from Sprints 6–8 ~1.5
+> As the developer, I want a clean release, so that the theme is portfolio-ready.
++ Theme Check clean, Lighthouse recorded, tagged ^v0.3^
+- Run Theme Check + Lighthouse and fix regressions ~0.75
+- Tag ^v0.3^ and update the README ~0.25
+@ Pro Workflow & Commerce | Build tools, testing, CI/CD, subscriptions, Flow, B2B and real client work.
+# Pro Tooling & Commerce Features | Work like a professional team, then add the features D2C brands ask for. | Self-tests #9–#11
+## Build tools: Vite, Tailwind & the asset pipeline
+k: build
+g: Write modern source code that compiles into the flat ^assets/^ folder Shopify expects.
+d: A ^src/^ → ^assets/^ pipeline with bundled JS and compiled CSS.
+r: vite tailwind cli
+> As a developer, I want a build step for CSS and JS, so that I can use modules, Tailwind and minification.
++ ^src/^ compiles to ^assets/^ via npm scripts
++ Output minified and referenced with ^asset_url^
+- Understand why theme assets must be flat (no subfolders) ~0.25
+- Set up Vite (or esbuild) to bundle ^src/js^ into ^assets/^ ~1
+- Add Tailwind (or PostCSS) with content paths pointing at ^.liquid^ files ~0.75
+> As a developer, I want the build to run alongside theme dev, so that hot reload still works.
++ One command runs the watcher and ^shopify theme dev^ together
+- Add a ^dev^ npm script running both in parallel ~0.5
+- Add ^src/^ and ^node_modules/^ to ^.shopifyignore^ ~0.25
+- Agree a convention: commit compiled assets or build in CI ~0.25
+## Automated testing: Playwright & Vitest
+k: build
+g: Catch regressions before clients do with end-to-end and unit tests.
+d: 3 Playwright journey tests + unit tests for your JS logic.
+r: playwright vitest
+> As a developer, I want end-to-end tests on the storefront, so that critical journeys never silently break.
++ Tests: add to cart, cart drawer update, predictive search
+- Install Playwright and point it at your preview URL ~0.5
+- Handle the storefront password in a setup step ~0.5
+- Write 3 journey tests (add to cart, drawer, search) ~1
+> As a developer, I want unit tests for JS logic, so that refactors are safe.
++ Vitest tests for variant matching and price formatting
+- Extract pure functions from your components ~0.5
+- Write Vitest unit tests for them ~0.5
+## CI/CD with GitHub Actions
+k: build
+g: Automate checks and deployments like a professional team.
+d: Pipeline that builds, lints, tests and deploys to a staging theme. Self-test #9 ✓
+r: actions cli themeaccess
+> As a team lead, I want every pull request checked automatically, so that broken code never merges.
++ Workflow runs build, Theme Check and tests on each PR
+- Write a GitHub Actions workflow: install, build, ^shopify theme check^ ~1
+- Run Playwright and Vitest in CI ~0.5
+- Add a Lighthouse CI step against a preview theme ~0.5
+> As a team lead, I want automatic deploys to a staging theme, so that clients can review every merge.
++ Merges to main push to a staging theme via CLI
+- Install the Theme Access app; store the password as a GitHub secret ~0.25
+- Deploy with ^shopify theme push --theme <id>^ in CI ~0.5
+- Explore AI-assisted dev tooling such as Shopify's Dev MCP server ~0.25
+## Subscriptions & selling plans
+g: Support subscribe-and-save — a common D2C request.
+d: Product form with one-time vs subscription options. Self-test #10 ✓
+r: subscriptions help
+> As a merchant, I want subscription options on products, so that customers can subscribe and save.
++ Shopify Subscriptions app configured with a selling plan
+- Install Shopify Subscriptions and create a subscribe-and-save plan ~0.5
+- Read the selling plans docs for themes ~0.5
+> As a shopper, I want to choose one-time or subscription, so that I can buy the way I like.
++ Product form passes ^selling_plan^; price updates per plan
++ Cart and drawer show the plan name
+- Render ^product.selling_plan_groups^ as radio options ~1
+- Update price from selling plan allocation data in JS ~0.75
+- Show ^item.selling_plan_allocation^ in cart and drawer ~0.5
+## Gift cards, bundles & notification templates
+g: Handle the commerce extras clients regularly ask to customise.
+d: Gift card template, a bundle product and a branded order confirmation email.
+r: help liquid
+> As a merchant, I want gift cards and bundles, so that I can sell gifts and multi-packs.
++ Gift card product with a styled ^gift_card.liquid^ template
++ A fixed bundle created with the Shopify Bundles app
+- Create a gift card product and style the gift card template ~0.75
+- Create a bundle with Shopify Bundles and check how it renders in cart ~0.5
+- Read about combined listings ~0.25
+> As a merchant, I want branded notification emails, so that post-purchase emails match my brand.
++ Order confirmation customised with Liquid
+- Edit the order confirmation in Settings → Notifications ~0.75
+- Add a care-tips block with Liquid; send yourself a test ~0.5
+## Shopify Flow automation
+g: Automate store operations without code — and know when code is the better tool.
+d: 3 working Flow workflows documented. Self-test #11 ✓
+r: flow
+> As an operations manager, I want automated workflows, so that repetitive tasks happen without me.
++ Workflows: tag high-value customers, low-stock alert, flag risky orders
+- Install Flow; explore triggers, conditions and actions ~0.5
+- Build: tag customers whose order total exceeds ₹5,000 ~0.5
+- Build: email alert when inventory drops below 5 ~0.5
+- Build: hold or flag high-risk orders for review ~0.5
+> As a developer, I want to extend Flow, so that clients can automate with custom logic.
++ Can explain Flow templates, Run code and app-provided triggers/actions
+- Use the Run code action to transform order data ~0.75
+- Read how apps add Flow triggers and actions ~0.25
+# B2B & Client Work | Wholesale on Shopify, then practise what agencies and freelancers do all day. | Self-test #12 & #13
+## B2B on Shopify
+g: Sell wholesale alongside retail from the same store.
+d: A B2B company with catalog pricing and quantity rules shown in the theme. Self-test #12 ✓
+r: b2b liquid
+> As a wholesale merchant, I want company accounts with custom pricing, so that trade buyers get their own terms.
++ Company, location and contact created
++ Catalog with price list and payment terms assigned
+- Read B2B features and plan availability ~0.5
+- Create a company, location and B2B customer ~0.5
+- Create a catalog with a price list and net payment terms ~0.5
+> As a B2B buyer, I want to see quantity rules and volume pricing, so that I order correctly.
++ Theme shows min/max/increment and price breaks
+- Render ^variant.quantity_rule^ in the product form ~0.75
+- Render ^variant.quantity_price_breaks^ as a volume pricing table ~0.75
+- Log in as the B2B customer and test the buying journey ~0.25
+## Customising a premium theme safely
+g: Most client work is editing someone else's theme — do it without breaking updates.
+d: A change log of minimal, documented customisations.
+r: cli github
+> As a client, I want changes made safely, so that my live store never breaks.
++ Work done on a duplicate; live theme untouched
++ All changes commented and logged
+- Duplicate the live theme and pull it via CLI ~0.25
+- Add a feature with new snippets/sections instead of editing core files ~1
+- Keep a CHANGELOG of every file touched ~0.25
+> As a client, I want theme updates to stay possible, so that I get new features later.
++ Can explain how to port customisations to a new theme version
+- Read how Theme Store theme updates work ~0.5
+- Diff two theme versions in Git and port one change ~0.75
+## Migrations, imports & redirects
+g: Move stores from other platforms — a common paid project.
+d: Migration checklist + successful CSV imports with redirects.
+r: help
+> As a merchant moving from WooCommerce, I want my products and customers migrated, so that I don't start from zero.
++ Products imported with variants and images via CSV
++ Customers imported with consent fields
+- Map a WooCommerce product export to Shopify's CSV format ~1
+- Import customers via CSV ~0.25
+- Read about the Store Importer app and bulk tools like Matrixify ~0.25
+> As a merchant, I want old URLs redirected, so that I keep my SEO.
++ 20 redirects imported via CSV
+- Build an old → new redirect map and import it ~0.5
+- Write a migration go-live checklist ~0.5
+## Tracking & third-party integrations
+g: Wire up analytics and marketing tags the right way.
+d: GA4, Meta and a custom pixel tracking add-to-cart events.
+r: pixels
+> As a marketer, I want GA4 and Meta tracking, so that I can measure ads.
++ Google & YouTube and Facebook & Instagram channels reviewed
++ Events verified in debug tools
+- Install the Google & YouTube channel and review GA4 setup ~0.5
+- Install the Facebook & Instagram channel and review pixel settings ~0.5
+> As a developer, I want a custom pixel, so that I can send events to any tool.
++ Custom pixel subscribes to ^product_added_to_cart^
+- Create a custom pixel in Customer events ~0.75
+- Publish a custom event from theme JS with ^Shopify.analytics.publish^ ~0.5
+## Client communication, scoping & estimates
+g: The non-code skills that get you hired and rehired.
+d: Templates: scope doc, estimate sheet and status update.
+r: community
+> As a client, I want clear scope and estimates, so that I know what I'm paying for.
++ Scope doc with in/out of scope, assumptions and timeline
++ Estimate broken into tasks with hours
+- Write a scope document for a sample brief ~1
+- Build an estimate sheet with buffer and assumptions ~0.5
+> As a client, I want regular updates, so that I trust the developer.
++ Status update template and one recorded update
+- Write a status update template (done / next / blockers) ~0.25
+- Record a 2-minute video update on your project ~0.25
+- Learn collaborator access requests vs staff accounts ~0.25
+## Project: client ticket sprint
+k: project
+g: Simulate a real week of agency tickets on Saffron Loom.
+d: 5 tickets closed with PRs and a client summary. Self-test #13 ✓
+r: github
+> As the client, I want five quick wins shipped, so that my store converts better.
++ Sticky add-to-cart, countdown bar, tag badges, overflow fix, trust badges
+- Ticket 1: sticky add-to-cart bar on mobile ~0.75
+- Ticket 2: announcement bar with countdown timer ~0.5
+- Ticket 3: product badges driven by product tags ~0.5
+- Ticket 4: fix a mobile overflow bug ~0.25
+- Ticket 5: trust badges block on the product page ~0.25
+> As the client, I want a clear handover, so that I know what changed.
++ One PR per ticket (CI green) + summary update
+- Write PR descriptions and a client summary ~0.5
+@ Apps, Extensions & Career | APIs, apps, extensions and headless — then get hired.
+# Admin API & App Basics | GraphQL, the Admin API and your first embedded app. | Self-test #14
+## GraphQL & the Admin API
+g: Learn GraphQL and read store data programmatically.
+d: Saved product queries with pagination. Self-test #14 ✓
+r: graphql gql
+> As a developer, I want to understand GraphQL, so that Shopify's APIs feel natural.
++ Understands queries, fields, variables and fragments
+- Work through the graphql.org Learn track ~1
+> As a developer, I want to query store data, so that I can build integrations.
++ Products query with first, cursor pagination and a search filter
+- Install the GraphiQL app on the dev store ~0.25
+- Query products, variants and pageInfo; paginate with ^after^ ~1
+- Filter with ^query: "tag:sale"^ ~0.25
+## Mutations, rate limits & bulk operations
+g: Write data safely at scale.
+d: A Node script that updates products + one bulk export.
+r: gql usage bulk
+> As a developer, I want to run mutations from code, so that I can automate store tasks.
++ Access token via an app with scopes
++ ^productUpdate^ and ^metafieldsSet^ run from a Node script
+- Create an app with product read/write scopes and get a token ~0.75
+- Write a Node fetch script for a query and a mutation ~1
+- Handle ^userErrors^ properly ~0.25
+> As a developer, I want to respect API limits, so that integrations never fail at scale.
++ Explains query cost and throttling
++ Ran a bulk operation export
+- Read API limits; inspect ^extensions.cost^ ~0.5
+- Run ^bulkOperationRunQuery^ and download the JSONL ~0.5
+## Scaffold your first app
+g: Create a real embedded Shopify app with the CLI.
+d: App running on the dev store with an embedded admin page.
+r: app cli
+> As a developer, I want to scaffold an embedded app, so that I learn the app structure.
++ ^shopify app init^ app installed on the dev store
++ Understands routes, loaders/actions, auth and session storage
+- Run ^shopify app init^ and ^shopify app dev^ ~1
+- Walk through ^app/routes^, ^shopify.server^ and the session table ~1
+> As a developer, I want to call the Admin API from my app with types, so that it does real work safely.
++ Loader fetches products with the authenticated admin client
++ TypeScript types used for the response
+- Use ^authenticate.admin^ in a loader to query products ~0.75
+- Add a typed helper for the product response ~0.25
+## App UI with Polaris & App Bridge
+g: Build admin UI that looks and behaves like Shopify itself.
+d: An app page listing low-stock products with a settings form.
+r: polaris
+> As a merchant, I want the app to feel native, so that it's easy to use.
++ Page built with Polaris components
++ Uses App Bridge for toasts, modals and navigation
+- Learn Polaris layout: page, sections, cards, tables ~0.75
+- Build a low-stock products table ~1
+- Use App Bridge toast and modal ~0.5
+> As a merchant, I want to set a stock threshold, so that the app matches my business.
++ Settings form saved and validated
+- Build a settings form with validation ~0.75
+## Webhooks, metafields & app config
+g: React to store events and store app data the Shopify way.
+d: App subscribed to product and uninstall webhooks.
+r: webhooks app
+> As an app, I want to react to store events, so that data stays in sync.
++ Webhook subscriptions declared in ^shopify.app.toml^
++ ^products/update^ and ^app/uninstalled^ handled
+- Declare webhook subscriptions in ^shopify.app.toml^ ~0.5
+- Handle ^products/update^ and log payloads ~0.75
+- Trigger test webhooks with ^shopify app webhook trigger^ ~0.25
+> As a developer, I want to meet privacy rules, so that my app can be distributed.
++ Mandatory compliance webhooks understood
++ Threshold stored in an app-owned metafield
+- Read the mandatory compliance (privacy) webhooks ~0.5
+- Store the threshold in an app-owned metafield ~0.5
+## Review: app checkpoint
+k: review
+g: Consolidate app fundamentals before extensions.
+d: All Sprint 9–11 tasks closed; app architecture explained in 2 minutes.
+r: app
+> As a learner, I want to close every open task, so that extensions build on solid ground.
++ All Sprint 9–11 epics complete
+- Finish any incomplete work packages from Sprints 9–11 ~1.5
+> As a learner, I want to re-explain the app stack, so that I can discuss it in interviews.
++ Diagram: auth/session → loaders → Admin API → webhooks
+- Draw the app architecture diagram ~0.5
+- Explain it aloud in 2 minutes ~0.25
+# Extensions, Functions & Headless | Extend storefront, checkout, accounts and backend logic; meet headless. | Self-test #15 & #16
+## Theme app extensions
+g: Add storefront features from an app without touching theme code.
+d: Low-stock app block + app embed from your app. Self-test #15 ✓
+r: ext
+> As a merchant, I want to add the app's badge from the theme editor, so that I don't need a developer.
++ App block renders on the product page and reads the threshold
+- Generate a theme app extension ~0.5
+- Build an 'Only X left' app block in Liquid ~1
+> As a merchant, I want a site-wide toggle, so that I can switch a feature on in one click.
++ App embed toggled from App embeds
+- Build an app embed (floating restock banner) ~0.75
+- Deploy with ^shopify app deploy^ and test on the store ~0.5
+## Shopify Functions
+g: Customise backend logic like discounts and delivery with Functions.
+d: A working tiered discount Function. Self-test #16 ✓
+r: functions
+> As a merchant, I want tiered discounts (2 items 10%, 3 items 15%), so that I sell more per order.
++ Discount function generated and deployed
++ Discount applies correctly at checkout
+- Read the Functions overview and input/output model ~0.75
+- Generate a discount function extension ~0.5
+- Write the input query and the logic in JavaScript ~1
+- Create the discount in admin and test at checkout ~0.5
+> As a developer, I want to know other Function types, so that I can propose them to clients.
++ Can explain delivery, payment customisation, validation and cart transform Functions
+- Read validation, payment customisation and cart transform docs ~0.5
+## Checkout & customer account extensions
+g: Know what you can customise in checkout and customer accounts today.
+d: A Thank-you page block + a customer account extension + capability notes.
+r: checkout custacct
+> As a merchant, I want a custom block on the Thank-you page, so that I can share care tips or offers.
++ Checkout UI extension renders on Thank-you / order status
+- Generate a checkout UI extension ~0.5
+- Build a care-tips block for the Thank-you page ~0.75
+> As a customer, I want useful extras in my account, so that I can manage orders easily.
++ Customer account UI extension renders on the order page
++ Can explain Plus-only checkout extension points
+- Generate a customer account UI extension (reorder or care guide) ~0.75
+- Explore checkout branding; note standard plans vs Plus ~0.5
+## Headless with Hydrogen & Storefront API
+g: Understand headless commerce well enough to discuss and prototype it.
+d: A Hydrogen demo running locally against your dev store.
+r: storefront hydrogen
+> As a developer, I want to query the Storefront API, so that I understand headless data flow.
++ Products queried and a cart created via the Storefront API
+- Read the Storefront API intro and get an access token ~0.5
+- Query products and create a cart with ^cartCreate^ ~0.75
+> As a developer, I want to run Hydrogen, so that I can compare it with Liquid themes.
++ Hydrogen app running locally
++ Liquid vs headless trade-offs written
+- Scaffold Hydrogen and connect it to your store ~1
+- Write a Liquid vs headless trade-offs note ~0.5
+## Project: Stock Signal mini app
+k: project
+g: Package the app sprints into a portfolio-grade app.
+d: Stock Signal app with admin, webhooks, app block, Flow trigger idea and README.
+r: app github
+> As a merchant, I want a complete low-stock app, so that I never miss restocks and shoppers feel urgency.
++ Admin page, settings, webhooks and app block working together
+- Integration pass: connect all pieces end to end ~1.25
+- Handle errors and empty states ~0.5
+> As a recruiter, I want to understand the app quickly, so that I can assess the candidate.
++ README with architecture diagram and screenshots
+- Write the README and record a 2-minute demo ~0.75
+# Portfolio & Job Readiness | Turn three months of work into proof, then start applying. | Self-test #17 · Apply!
+## Portfolio polish & case studies
+k: project
+g: Turn three months of work into proof that gets interviews.
+d: Saffron Loom live demo + 2 case studies + clean GitHub. Self-test #17 ✓
+r: github
+> As a recruiter, I want a polished demo store, so that I can judge the candidate's skill.
++ Store link + password ready; every feature works on mobile
+- Final QA pass across theme and app ~1
+- Fix remaining bugs and tag ^v1.0^ ~0.5
+> As a candidate, I want strong case studies, so that I can explain my work in 3 minutes.
++ Two case studies: theme and app
++ 3-minute walkthrough rehearsed
+- Write two case studies (problem → approach → result) ~1
+- Rehearse and record a 3-minute walkthrough ~0.5
+## Resume, profiles & freelancing
+g: Get found by employers, agencies and clients.
+d: Updated resume, LinkedIn, GitHub profile and a freelance profile.
+r: partnerdir community
+> As a hiring manager, I want a focused resume, so that I see Shopify skills at a glance.
++ One-page resume with projects, skills and links
+- Rewrite your resume around Shopify projects and outcomes ~1
+- Update LinkedIn headline, About and Featured links ~0.5
+> As a freelancer, I want profiles on the right platforms, so that clients can find me.
++ One freelance profile + a GitHub profile README
+- Create or refresh an Upwork/Fiverr profile ~0.5
+- Shortlist 15 Shopify agencies and D2C brands to apply to ~0.5
+## Mock interviews & live-coding drills
+g: Practise under pressure so the real thing feels familiar.
+d: 2 mock interviews + 3 timed coding drills.
+r: liquid cart
+> As a candidate, I want crisp answers to common questions, so that I interview confidently.
++ Every question in the Self-test tab answered aloud
+- Answer every interview question aloud and refine ~1
+- Mock interview with a friend or record yourself ~0.75
+> As a candidate, I want to pass live-coding tasks, so that I can prove skills on the spot.
++ Three timed drills done in 45 minutes each
+- Drill: section with blocks and presets in 45 min ~0.75
+- Drill: AJAX add-to-cart + count bubble in 45 min ~0.75
+- Drill: metafields + metaobject on a product page in 45 min ~0.75
+## Final self-test & 2027 roadmap
+g: Verify you can do everything alone — then start applying.
+d: All 17 self-test items ticked and first 10 applications sent.
+r: community dev
+> As a learner, I want to verify every self-test item alone, so that I know I'm ready.
++ All self-test items done without notes
+- Redo any weak self-test item on a fresh dev store ~1
+- Send your first 10 applications or proposals ~1
+> As a developer, I want a plan for next year, so that I keep growing.
++ 2027 learning roadmap written
+- Pick next skills (Plus, Hydrogen, App Store launch) and plan Q1 ~0.5
+`;
+
+/* ============ PARSER ============ */
+function parsePlan(src){
+ const P=[],W=[],D=[];let d,s;
+ src.split("\n").forEach(raw=>{const l=raw.trim();if(!l)return;
+  if(l.startsWith("@ ")){const[t,g]=l.slice(2).split(" | ");P.push({t,g})}
+  else if(l.startsWith("## ")){d={w:W.length,t:l.slice(3),k:"learn",g:"",d:"",r:[],s:[]};D.push(d)}
+  else if(l.startsWith("# ")){const[t,g,o]=l.slice(2).split(" | ");W.push({t,g,o,p:P.length})}
+  else if(/^[kgdr]:/.test(l)){const v=l.slice(2).trim(),c=l[0];if(c==="r")d.r=v.split(/\s+/);else d[c]=v}
+  else if(l.startsWith("> ")){s=[l.slice(2),[],[]];d.s.push(s)}
+  else if(l.startsWith("+ "))s[1].push(l.slice(2));
+  else if(l.startsWith("- ")){const m=l.slice(2).match(/^(.*?)\s*~\s*([\d.]+)$/);s[2].push(m?[m[1],+m[2]]:[l.slice(2),0.5])}
+ });
+ return{P,W,D};
+}
+const{P,W,D}=parsePlan(PLAN);const N=D.length;
+const PH=[{c:"#2e6b4e",s:"#e6f2eb"},{c:"#3d5c9e",s:"#e8eef9"},{c:"#a8662a",s:"#fbeedd"},{c:"#6b4fa3",s:"#efe9f9"},{c:"#a8456a",s:"#fae8ef"}];
+const phOf=w=>PH[(W[w-1].p-1)%PH.length];
+
+/* ============ INDIAN FESTIVAL BREAKS ============ */
+const HOL={
+ "2026-10-02":"Gandhi Jayanti","2026-10-20":"Dussehra",
+ "2026-11-06":"Dhanteras","2026-11-07":"Naraka Chaturdashi","2026-11-08":"Diwali","2026-11-09":"Govardhan Puja · New Year","2026-11-10":"Diwali break","2026-11-11":"Bhai Dooj",
+ "2026-11-24":"Guru Nanak Jayanti","2026-12-25":"Christmas","2027-01-14":"Makar Sankranti","2027-01-26":"Republic Day"
+};
+
+const R={
+ dev:["Shopify Dev Docs","https://shopify.dev"],help:["Shopify Help Center","https://help.shopify.com"],partners:["Shopify Partners","https://partners.shopify.com"],
+ liquid:["Liquid reference","https://shopify.dev/docs/api/liquid"],arch:["Theme architecture","https://shopify.dev/docs/storefronts/themes/architecture"],
+ cli:["Shopify CLI for themes","https://shopify.dev/docs/storefronts/themes/tools/cli"],github:["GitHub integration","https://shopify.dev/docs/storefronts/themes/tools/github"],
+ sections:["Sections","https://shopify.dev/docs/storefronts/themes/architecture/sections"],blocks:["Blocks","https://shopify.dev/docs/storefronts/themes/architecture/blocks"],
+ settings:["Theme settings","https://shopify.dev/docs/storefronts/themes/architecture/settings"],custom:["Metafields & metaobjects","https://shopify.dev/docs/apps/build/custom-data"],
+ cart:["Cart AJAX API","https://shopify.dev/docs/api/ajax/reference/cart"],srapi:["Section Rendering API","https://shopify.dev/docs/api/section-rendering"],
+ recs:["Product Recommendations API","https://shopify.dev/docs/api/ajax/reference/product-recommendations"],predictive:["Predictive Search API","https://shopify.dev/docs/api/ajax/reference/predictive-search"],
+ filtering:["Storefront filtering","https://shopify.dev/docs/storefronts/themes/navigation-search/filtering"],perf:["Theme performance","https://shopify.dev/docs/storefronts/themes/best-practices/performance"],
+ vitals:["Core Web Vitals","https://web.dev/articles/vitals"],a11y:["Theme accessibility","https://shopify.dev/docs/storefronts/themes/best-practices/accessibility"],
+ wcag:["WCAG quick reference","https://www.w3.org/WAI/WCAG22/quickref/"],themestore:["Theme Store requirements","https://shopify.dev/docs/storefronts/themes/store/requirements"],
+ pixels:["Web Pixels API","https://shopify.dev/docs/api/web-pixels-api"],mdn:["MDN Web Docs","https://developer.mozilla.org"],
+ vite:["Vite","https://vite.dev"],tailwind:["Tailwind CSS","https://tailwindcss.com/docs"],playwright:["Playwright","https://playwright.dev"],vitest:["Vitest","https://vitest.dev"],
+ actions:["GitHub Actions","https://docs.github.com/en/actions"],themeaccess:["Theme Access app","https://apps.shopify.com/theme-access"],
+ subscriptions:["Subscriptions in themes","https://shopify.dev/docs/storefronts/themes/pricing-payments/subscriptions"],flow:["Shopify Flow","https://help.shopify.com/en/manual/shopify-flow"],
+ b2b:["B2B on Shopify","https://help.shopify.com/en/manual/b2b"],
+ graphql:["GraphQL Learn","https://graphql.org/learn/"],gql:["Admin GraphQL API","https://shopify.dev/docs/api/admin-graphql"],usage:["API usage & limits","https://shopify.dev/docs/api/usage"],
+ bulk:["Bulk operations","https://shopify.dev/docs/api/usage/bulk-operations/queries"],app:["Build apps","https://shopify.dev/docs/apps/build"],
+ polaris:["App Home: Polaris & App Bridge","https://shopify.dev/docs/api/app-home"],webhooks:["Webhooks","https://shopify.dev/docs/apps/build/webhooks"],
+ ext:["Theme app extensions","https://shopify.dev/docs/apps/build/online-store/theme-app-extensions"],functions:["Shopify Functions","https://shopify.dev/docs/apps/build/functions"],
+ checkout:["Checkout UI extensions","https://shopify.dev/docs/api/checkout-ui-extensions"],custacct:["Customer account UI extensions","https://shopify.dev/docs/api/customer-account-ui-extensions"],
+ storefront:["Storefront API","https://shopify.dev/docs/api/storefront"],hydrogen:["Hydrogen","https://hydrogen.shopify.dev"],
+ dawn:["Dawn theme (GitHub)","https://github.com/Shopify/dawn"],horizon:["Horizon theme (GitHub)","https://github.com/Shopify/horizon"],
+ community:["Shopify Dev Community","https://community.shopify.dev"],partnerdir:["Shopify Partner Directory","https://www.shopify.com/partners/directory"]
+};
+const SELF=[
+ ["Create a dev store and set up products, collections, shipping, COD and discounts",3],
+ ["Pull a theme with the CLI, work locally, push to an unpublished theme",10],
+ ["Build a variant picker that updates price, image and URL",14],
+ ["Build a new section with settings, blocks and presets",18],
+ ["Show metafields and metaobjects on the storefront",29],
+ ["Build a cart drawer using the Cart API",34],
+ ["Debug a mobile layout or JS bug with DevTools",37],
+ ["Improve Lighthouse performance and explain what you changed",38],
+ ["Run a CI pipeline that builds, tests and deploys your theme",43],
+ ["Add subscription (selling plan) options to a product form",44],
+ ["Automate a store task with Shopify Flow",46],
+ ["Set up B2B pricing and quantity rules and show them in the theme",47],
+ ["Deliver a client ticket with scope, estimate and status update",52],
+ ["Query products with the Admin GraphQL API",53],
+ ["Ship a theme app extension from your own app",59],
+ ["Write and deploy a Shopify Function",60],
+ ["Explain your portfolio project clearly in 3 minutes",64]
+];
+const QS=[
+ ["How do you make a theme fast? Name 3 things.",["<b>1. Images:</b> responsive images with <code>image_url</code> + <code>image_tag</code> (widths & sizes), lazy-load below the fold, eager-load the LCP hero.","<b>2. JavaScript:</b> keep it small, use <code>defer</code>, load scripts only for sections that need them.","<b>3. Apps & third parties:</b> remove unused apps and prefer app blocks/embeds. Bonus: preload key fonts, trim render-blocking CSS, verify with Lighthouse + Theme Check."]],
+ ["What does Shopify CLI theme dev do?",["It uploads your local theme as a hidden <b>development theme</b> and serves a local preview (usually <code>http://127.0.0.1:9292</code>) with <b>hot reload</b>.","Saved files sync automatically and it prints preview + editor links — the live theme is never touched. When ready, <code>push --unpublished</code> or publish deliberately."]],
+ ["How do apps add features to a theme without editing theme code?",["Through <b>theme app extensions</b>: <b>app blocks</b> merchants place in sections that accept '@app' blocks, and <b>app embed blocks</b> for global features like chat widgets.","Merchants control them in the theme editor, and they disappear cleanly on uninstall. Beyond the theme: Checkout UI extensions and Shopify Functions."]],
+ ["Walk me through a feature you built and one problem you solved.",["Use <b>STAR</b>. Example: Saffron Loom lacked size info → built a size-chart metaobject referenced by a product metafield, shown in an accessible modal → the merchant edits one entry for 40 products.","Problem example: the cart drawer showed stale totals after fast quantity clicks → disabled controls during requests and re-rendered via bundled sections from the Cart API response."]],
+ ["What's the difference between sections, blocks and snippets?",["<b>Sections</b> are merchant-customisable modules with their own schema, added to JSON templates. <b>Blocks</b> are repeatable units inside sections (theme blocks live in <code>/blocks</code> and can nest).","<b>Snippets</b> are reusable Liquid partials called with <code>render</code> — invisible to the editor and with no schema."]],
+ ["JSON templates vs Liquid templates — why did OS 2.0 move to JSON?",["A JSON template lists which sections appear and their settings, so merchants can add, remove and reorder sections on <b>every</b> page. Liquid templates hard-code markup.","JSON also enables alternate templates per product/page and app blocks everywhere."]],
+ ["Metafields vs metaobjects — when do you use which?",["<b>Metafields</b> add fields to an existing resource (a product's fabric). <b>Metaobjects</b> are standalone content types with several fields, reusable across resources (a size chart many products reference).","Rule of thumb: data owned by one resource → metafield; shared structured entity → metaobject."]],
+ ["How would you build AJAX add-to-cart that updates a cart drawer?",["Intercept the form submit, build <code>FormData</code>, POST to <code>/cart/add.js</code> with a <code>sections</code> param for the drawer and count bubble.","Swap the returned HTML, open the drawer, handle 422 errors, disable the button during the request and broadcast a cart-updated event."]],
+ ["How do you use a build tool with a Shopify theme?",["Keep source in <code>src/</code>, compile with Vite/esbuild/Tailwind into the flat <code>assets/</code> folder, and exclude <code>src/</code> from upload with <code>.shopifyignore</code>.","Run the watcher alongside <code>shopify theme dev</code>, and in CI build, run Theme Check and tests, then deploy with the CLI using a Theme Access password."]],
+ ["How do subscriptions work on the theme side?",["Products carry <b>selling plan groups</b>; the product form submits a <code>selling_plan</code> id with the variant. Prices come from the selling plan allocation.","The cart line exposes <code>selling_plan_allocation</code> so you can show the plan name; billing is handled by the subscriptions app."]],
+ ["When would you use Shopify Flow vs custom code?",["Flow is ideal for event-driven ops automation — tagging customers, inventory alerts, order holds — that merchants can maintain themselves.","Use custom code (apps, Functions) when logic must run inside checkout, needs a custom UI, or exceeds what Flow actions and Run code can do."]],
+ ["What does B2B change for a theme developer?",["Buyers log in under a company location and see catalog-specific prices, payment terms and <b>quantity rules</b>.","The theme should respect <code>variant.quantity_rule</code> (min/max/increment) in quantity inputs and show <code>quantity_price_breaks</code> as volume pricing."]],
+ ["How do you safely customise a client's live theme?",["Duplicate it, pull with CLI into Git, work on a development/unpublished theme, add new files rather than editing core ones, log every change.","Share a preview link, QA on mobile, get approval, publish at low traffic and keep the old theme as a rollback."]],
+ ["What are Shopify Functions and when would you use one?",["Server-side logic (compiled to WebAssembly) that Shopify runs inside cart and checkout: discounts, delivery and payment customisations, validation, cart transforms.","Use one when built-in settings can't express the business rule. They replace the old Shopify Scripts."]],
+ ["How do Admin GraphQL rate limits work?",["Each query has a calculated <b>cost</b> in points drawn from a leaky bucket per app per store; check <code>extensions.cost</code> in responses.","Stay within limits by requesting fewer fields, paginating, using bulk operations for large exports and retrying with backoff when throttled."]]
+];
+const DS=["Dev stores are for building and testing only — they can't take real payments.","Use <b>Bogus Gateway</b> for test checkouts.","The storefront is password-protected (Online Store → Preferences). Share the password with recruiters along with the link.","Most App Store apps can be installed free on dev stores for testing."];
+const CLI=[["shopify theme pull --store your-store.myshopify.com","Download theme files"],["shopify theme dev","Local preview + hot reload"],["shopify theme push --unpublished","New unpublished theme"],["shopify theme check","Lint for errors & perf"],["shopify theme share","Shareable preview link"],["shopify app init","Scaffold an app"],["shopify app dev","Run the app on your store"],["shopify app generate extension","Add an extension"],["shopify app deploy","Release app config & extensions"]];
+
+/* ============ STATE ============ */
+const KEY="shopify-roadmap-v3";
+const TABS=["home","road","test","res"];
+const pad=n=>String(n).padStart(2,"0");
+const ymd=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const parse=s=>{const[a,b,c]=s.split("-").map(Number);return new Date(a,b-1,c)};
+const monthOf=k=>k.slice(0,7);
+let S={start:"2026-10-06",mode:"6",hol:"1",done:{},notes:{},self:{},day:null,tab:"home",sel:null,month:null,back:null};
+let rangeMode=false,anchor=null;
+let saveT;
+const store={
+ async get(){
+  try{if(window.storage){const r=await window.storage.get(KEY,false);if(r&&r.value)return r.value}}catch(e){}
+  try{return window.localStorage.getItem(KEY)}catch(e){return null}
+ },
+ async set(v){
+  try{if(window.storage){await window.storage.set(KEY,v,false);return}}catch(e){}
+  try{window.localStorage.setItem(KEY,v)}catch(e){}
+ }
+};
+function save(){clearTimeout(saveT);saveT=setTimeout(()=>store.set(JSON.stringify(S)),300)}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtTxt=s=>esc(s).replace(/\^([^^]+)\^/g,"<code>$1</code>");
+const fh=h=>+h.toFixed(2);
+const fmtD=(s,o)=>parse(s).toLocaleDateString("en-IN",o||{weekday:"short",day:"numeric",month:"short"});
+const short={day:"numeric",month:"short"};
+const KIND={learn:"Learn",build:"Build",project:"Project",review:"Review"};
+const LABEL={done:"Completed",today:"Today",late:"Overdue",prog:"In progress",up:"Upcoming"};
+
+/* ============ DERIVED ============ */
+const isHol=k=>S.hol==="1"&&!!HOL[k];
+const baseStudy=d=>{const wd=d.getDay();return S.mode==="7"||(S.mode==="6"&&wd!==0)||(S.mode==="5"&&wd!==0&&wd!==6)};
+let _dc=null;
+function dates(){
+ const sig=S.start+S.mode+S.hol;if(_dc&&_dc.sig===sig)return _dc.ds;
+ const out=[];const d=parse(S.start);let g=0;
+ while(out.length<N&&g<700){if(baseStudy(d)&&!isHol(ymd(d)))out.push(ymd(d));d.setDate(d.getDate()+1);g++}
+ const map={};out.forEach((k,i)=>map[k]=i);_dc={sig,ds:out,map};return out;
+}
+const idxOfDate=k=>{dates();const v=_dc.map[k];return v===undefined?-1:v};
+function tasks(i){const o=[];D[i].s.forEach((st,si)=>st[2].forEach((k,ki)=>o.push({id:`${i+1}.${si+1}.${ki+1}`,h:k[1]})));return o}
+function dayStat(i){const t=tasks(i),dn=t.filter(x=>S.done[x.id]);return{n:t.length,d:dn.length,h:t.reduce((a,x)=>a+x.h,0),dh:dn.reduce((a,x)=>a+x.h,0)}}
+function agg(idx){let n=0,d=0,h=0,dh=0,full=0;idx.forEach(i=>{const s=dayStat(i);n+=s.n;d+=s.d;h+=s.h;dh+=s.dh;if(s.d===s.n)full++});return{n,d,h,dh,full,pct:n?Math.round(d/n*100):0}}
+function status(i,ds,today){const st=dayStat(i);if(st.d===st.n)return"done";if(ds[i]===today)return"today";if(ds[i]<today)return"late";if(st.d>0)return"prog";return"up"}
+const sprintDays=w=>D.map((d,i)=>d.w===w?i:-1).filter(i=>i>=0);
+function focusIdx(ds,today){let i=ds.indexOf(today);if(i>=0)return i;i=ds.findIndex(d=>d>today);return i<0?N-1:i}
+function planMonths(){const ds=dates(),out=[];let m=new Date(parse(ds[0]).getFullYear(),parse(ds[0]).getMonth(),1);const end=parse(ds[N-1]);while(m<=end){out.push(m.getFullYear()+"-"+pad(m.getMonth()+1));m=new Date(m.getFullYear(),m.getMonth()+1,1)}return out}
+function holsBetween(a,b,inclEnd=true){return Object.keys(HOL).sort().filter(k=>isHol(k)&&k>=a&&(inclEnd?k<=b:k<b))}
+function selBounds(){const ds=dates();if(S.sel.t==="sprint"){const idx=sprintDays(S.sel.w);return{a:ds[idx[0]],b:ds[idx[idx.length-1]]}}if(S.sel.t==="range")return{a:S.sel.a,b:S.sel.b};return null}
+function currentKey(){const ds=dates();if(S.sel.t==="day")return ds[S.day-1];if(S.sel.t==="date")return S.sel.k;return null}
+
+/* ============ SELECTION ============ */
+function selectDay(n){S.day=Math.max(1,Math.min(N,n));S.sel={t:"day"};S.month=monthOf(dates()[S.day-1])}
+function selectDate(k){const i=idxOfDate(k);S.back=null;if(i>=0)selectDay(i+1);else{S.sel={t:"date",k};S.month=monthOf(k)}}
+function selectSprint(w){S.sel={t:"sprint",w};S.back=null;S.month=monthOf(dates()[sprintDays(w)[0]])}
+function setRange(a,b){if(a>b)[a,b]=[b,a];if(a===b){selectDate(a);return}S.sel={t:"range",a,b};S.back=null}
+function commit(opts={}){render(opts);save();if(!opts.keep&&S.tab==="home"&&window.innerWidth<1100&&opts.scrollPanel){document.getElementById("panel").scrollIntoView({behavior:"smooth",block:"start"})}}
+
+/* ============ RENDER ============ */
+function render(o={}){
+ const pnl=document.getElementById("panel"),ps=pnl.scrollTop,ws=window.scrollY;
+ renderSummary();renderRail();renderMonth();renderPanel();renderRoad();renderDays();renderDetail();
+ if(o.keep){pnl.scrollTop=ps;window.scrollTo(0,ws)}else pnl.scrollTop=0;
+}
+
+function renderSummary(){
+ const ds=dates(),today=ymd(new Date()),all=agg(D.map((_,i)=>i));
+ const ti=ds.indexOf(today),fi=focusIdx(ds,today),day=D[fi];
+ let eye;
+ if(ti>=0)eye=`Today · Day ${ti+1} of ${N} · Sprint ${day.w}`;
+ else if(isHol(today))eye=`Festival break · ${HOL[today]} · next ${fmtD(ds[fi])}`;
+ else if(today<ds[0])eye=`Starts ${fmtD(ds[0])} · Day 1 of ${N}`;
+ else if(today>ds[N-1])eye="Plan window complete";
+ else eye=`Rest day · next up ${fmtD(ds[fi])}`;
+ const expected=ds.filter(d=>d<today).length;
+ const late=D.filter((_,i)=>ds[i]<today&&dayStat(i).d<dayStat(i).n).length;
+ const brk=holsBetween(ds[0],ds[N-1]).filter(k=>baseStudy(parse(k))).length;
+ let pace,pc;
+ if(late===0){pace=all.full>expected?`Ahead <small>+${all.full-expected}</small>`:"On track";pc="var(--acc)"}
+ else{pace=`Behind <small>${late}d</small>`;pc="var(--red)"}
+ document.getElementById("summary").innerHTML=`
+  <div class="sumL">
+   <div class="ringS"><svg width="64" height="64"><circle cx="32" cy="32" r="26" fill="none" stroke="#f1f0eb" stroke-width="7"/><circle cx="32" cy="32" r="26" fill="none" stroke="#3f8a66" stroke-width="7" stroke-linecap="round" stroke-dasharray="163.4" stroke-dashoffset="${163.4*(1-all.d/all.n)}"/></svg><b>${all.pct}%</b></div>
+   <div class="sumT"><div class="eyebrow">${esc(eye)}</div><b class="serif">${esc(day.t)}</b></div>
+   <button class="btn sm" data-home="${fi+1}">Open →</button>
+  </div>
+  <div class="sumR">
+   <div class="ms"><div class="k">Tasks</div><div class="v">${all.d} <small>/ ${all.n}</small></div><div class="mbar"><i style="width:${all.d/all.n*100}%"></i></div></div>
+   <div class="ms"><div class="k">Hours</div><div class="v">${fh(all.dh)} <small>/ ${Math.round(all.h)}</small></div><div class="mbar"><i style="width:${all.dh/all.h*100}%;background:var(--blu)"></i></div></div>
+   <div class="ms"><div class="k">Epics</div><div class="v">${all.full} <small>/ ${N}</small></div><div class="mbar"><i style="width:${all.full/N*100}%;background:var(--amb)"></i></div></div>
+   <div class="ms"><div class="k">Pace · ends ${fmtD(ds[N-1],short)}</div><div class="v" style="color:${pc}">${pace}</div><div style="font-size:11px;color:var(--mute)">${brk} festival day${brk===1?"":"s"} off</div></div>
+  </div>`;
+}
+
+function renderRail(){
+ const ds=dates(),today=ymd(new Date()),cur=D[focusIdx(ds,today)].w;
+ const selW=S.sel.t==="sprint"?S.sel.w:S.sel.t==="day"?D[S.day-1].w:null;
+ const rail=document.getElementById("rail");
+ rail.innerHTML=W.map((w,wi)=>{const n=wi+1,idx=sprintDays(n),a=agg(idx),c=phOf(n);
+  return`<button class="rchip${selW===n?" on":""}${cur===n?" cur":""}" data-sprint="${n}" style="--c:${c.c};--s:${c.s}"><div class="rt"><span>SPRINT ${n}</span><span>${a.pct}%</span></div><b>${esc(w.t)}</b><span class="rd">${fmtD(ds[idx[0]],short)} – ${fmtD(ds[idx[idx.length-1]],short)} · ${idx.length} epics</span><div class="mbar"><i style="width:${a.pct}%"></i></div></button>`}).join("");
+ const on=rail.querySelector(".rchip.on");
+ if(on&&(on.offsetLeft<rail.scrollLeft||on.offsetLeft+on.offsetWidth>rail.scrollLeft+rail.clientWidth))rail.scrollLeft=on.offsetLeft-12;
+}
+
+function renderMonth(){
+ const ds=dates(),today=ymd(new Date()),months=planMonths();
+ if(!S.month||!months.includes(S.month))S.month=monthOf(ds[S.day-1]);
+ const[y,mo]=S.month.split("-").map(Number);
+ const first=new Date(y,mo-1,1),days=new Date(y,mo,0).getDate(),lead=(first.getDay()+6)%7,rows=Math.ceil((lead+days)/7);
+ document.getElementById("mTitle").textContent=first.toLocaleDateString("en-IN",{month:"long",year:"numeric"});
+ const mi=months.indexOf(S.month);
+ document.getElementById("mPrev").disabled=mi<=0;
+ document.getElementById("mNext").disabled=mi>=months.length-1;
+ const sb=selBounds(),pickK=currentKey(),selW=S.sel.t==="sprint"?S.sel.w:null;
+ let html="";
+ for(let r=0;r<rows;r++){
+  let cells="";const spans={};
+  for(let c=0;c<7;c++){
+   const n=r*7+c-lead+1;
+   if(n<1||n>days){cells+=`<div class="mcell out"></div>`;continue}
+   const k=`${y}-${pad(mo)}-${pad(n)}`,i=idxOfDate(k);
+   const cls=["mcell"];if(k===today)cls.push("now");if(sb&&k>=sb.a&&k<=sb.b)cls.push("insel");if(pickK===k)cls.push("pick");
+   if(i>=0){
+    const st=status(i,ds,today),s=dayStat(i),d=D[i];cls.push("st","s-"+st);if(d.k==="project")cls.push("kp");if(d.k==="review")cls.push("kr");
+    if(!spans[d.w])spans[d.w]=[c,c];spans[d.w][1]=c;
+    cells+=`<div class="${cls.join(" ")}" data-k="${k}" title="E-${pad(i+1)} · ${esc(d.t)} · ${LABEL[st]}"><span class="dn">${n}</span><div class="ep"><span class="ec">E-${pad(i+1)}</span><span class="et">${esc(d.t)}</span><div class="mbar"><i style="width:${s.d/s.n*100}%"></i></div></div></div>`;
+   }else if(isHol(k)){
+    cls.push("hol");
+    const inS=sprintSpanning(k);if(inS){if(!spans[inS])spans[inS]=[c,c];spans[inS][0]=Math.min(spans[inS][0],c);spans[inS][1]=Math.max(spans[inS][1],c)}
+    cells+=`<div class="${cls.join(" ")}" data-k="${k}"><span class="dn">${n}</span><div class="hn">✦ ${esc(HOL[k])}</div></div>`;
+   }else{
+    cls.push("rest");const inPlan=k>=ds[0]&&k<=ds[N-1];
+    cells+=`<div class="${cls.join(" ")}" data-k="${k}"><span class="dn">${n}</span>${inPlan?`<div class="rn">Rest</div>`:""}</div>`;
+   }
+  }
+  let bars="";
+  Object.keys(spans).forEach(w=>{
+   w=+w;const[c0,c1]=spans[w],idx=sprintDays(w),c=phOf(w);
+   const firstK=ds[idx[0]],lastK=ds[idx[idx.length-1]];
+   const rowStart=`${y}-${pad(mo)}-${pad(Math.max(1,r*7+c0-lead+1))}`,rowEnd=`${y}-${pad(mo)}-${pad(Math.min(days,r*7+c1-lead+1))}`;
+   const bs=rowStart<=firstK,be=rowEnd>=lastK;
+   const l=(bs?4:0),rr=(be?4:0);
+   bars+=`<button class="bar${bs?" bs":""}${be?" be":""}${selW===w?" on":""}" data-sprint="${w}" style="--c:${c.c};--s:${c.s};left:calc(${c0}*100%/7 + ${l}px);width:calc(${c1-c0+1}*100%/7 - ${l+rr}px)" title="Sprint ${w} · ${esc(W[w-1].t)}"><b>S${w}</b>${esc(W[w-1].t)}</button>`;
+  });
+  html+=`<div class="wrow"><div class="wcells">${cells}</div>${bars}</div>`;
+ }
+ document.getElementById("month").innerHTML=html;
+ const brks=holsBetween(`${y}-${pad(mo)}-01`,`${y}-${pad(mo)}-${pad(days)}`);
+ document.getElementById("brkList").innerHTML=brks.map(k=>`<span><b>${parse(k).getDate()}</b>${esc(HOL[k])}</span>`).join("");
+ setHint();
+}
+function sprintSpanning(k){const ds=dates();for(let w=1;w<=W.length;w++){const idx=sprintDays(w);if(k>ds[idx[0]]&&k<ds[idx[idx.length-1]])return w}return null}
+function setHint(msg){
+ const h=document.getElementById("hint");
+ if(msg){h.textContent=msg;h.classList.add("active");return}
+ h.classList.toggle("active",rangeMode);
+ h.textContent=rangeMode?(anchor?`Start: ${fmtD(anchor)} — now tap the end date`:"Range mode: tap the start date"):(window.matchMedia("(hover:hover)").matches?"Click a date to open its epic · drag or Shift-click to select a range · click a sprint bar for the whole sprint · ← → keys move between epics":"Tap a date to open its epic · tap a sprint bar for the whole sprint · use Select range for several days");
+ document.getElementById("rangeBtn").classList.toggle("on",rangeMode);
+}
+
+/* ---- side panel ---- */
+function crumbs(i){
+ const ds=dates(),w=D[i].w,mk=monthOf(ds[i]);
+ const back=S.back?`<button data-back>← Back to ${S.back.t==="sprint"?"Sprint "+S.back.w:"range"}</button><span class="sep">|</span>`:"";
+ return`<div class="crumbs">${back}<button data-month="${mk}">${parse(mk+"-01").toLocaleDateString("en-IN",{month:"long"})}</button><span>›</span><button data-sprint="${w}">Sprint ${w}</button><span>›</span><span>E-${pad(i+1)}</span></div>`;
+}
+function eItem(i,ds,today){
+ const st=status(i,ds,today),s=dayStat(i),d=D[i],dt=parse(ds[i]);
+ return`<button class="eItem s-${st}" data-open="${i+1}"><div class="eDate"><small>${dt.toLocaleDateString("en-IN",{weekday:"short"})}</small><b>${dt.getDate()}</b><small>${dt.toLocaleDateString("en-IN",{month:"short"})}</small></div><div class="eMain"><b>${esc(d.t)}</b><span>E-${pad(i+1)} · ${KIND[d.k]} · ${fh(s.h)} h · ${LABEL[st]}</span></div><div class="eSide">${st==="done"?"✓ Done":`${s.d}/${s.n}`}<div class="mbar"><i style="width:${s.d/s.n*100}%"></i></div></div></button>`;
+}
+function holItem(k){const dt=parse(k);return`<div class="eItem hol"><div class="eDate"><small>${dt.toLocaleDateString("en-IN",{weekday:"short"})}</small><b>${dt.getDate()}</b><small>${dt.toLocaleDateString("en-IN",{month:"short"})}</small></div><div class="eMain"><b>✦ ${esc(HOL[k])}</b><span>Festival break · no epic scheduled</span></div><div></div></div>`}
+function listFor(a,b){
+ const ds=dates(),today=ymd(new Date()),items=[];
+ ds.forEach((k,i)=>{if(k>=a&&k<=b)items.push({k,h:eItem(i,ds,today)})});
+ holsBetween(a,b).forEach(k=>items.push({k,h:holItem(k)}));
+ items.sort((x,y)=>x.k<y.k?-1:1);
+ return items.map(x=>x.h).join("");
+}
+function statsFor(idx,a,b){
+ const s=agg(idx),br=holsBetween(a,b).length;
+ return`<div class="rStats">
+  <div class="ms"><div class="k">Epics complete</div><div class="v">${s.full} <small>/ ${idx.length}</small></div><div class="mbar"><i style="width:${idx.length?s.full/idx.length*100:0}%;background:var(--amb)"></i></div></div>
+  <div class="ms"><div class="k">Tasks</div><div class="v">${s.d} <small>/ ${s.n}</small></div><div class="mbar"><i style="width:${s.pct}%"></i></div></div>
+  <div class="ms"><div class="k">Hours</div><div class="v">${fh(s.dh)} <small>/ ${fh(s.h)}</small></div><div class="mbar"><i style="width:${s.h?s.dh/s.h*100:0}%;background:var(--blu)"></i></div></div>
+  <div class="ms"><div class="k">Festival breaks</div><div class="v">${br}</div><div style="font-size:11px;color:var(--mute)">${br?"inside this range":"none in range"}</div></div>
+ </div>`;
+}
+function renderPanel(){
+ const el=document.getElementById("panel"),ds=dates(),today=ymd(new Date());
+ let h="";
+ if(S.sel.t==="day"){h=crumbs(S.day-1)+epicHTML(S.day-1)}
+ else if(S.sel.t==="sprint"){
+  const w=S.sel.w,sp=W[w-1],idx=sprintDays(w),a=ds[idx[0]],b=ds[idx[idx.length-1]],c=phOf(w);
+  h=`<div class="crumbs"><button data-month="${monthOf(a)}">${parse(a).toLocaleDateString("en-IN",{month:"long"})}</button><span>›</span><span>Sprint ${w}</span></div>
+   <div class="eyebrow" style="color:${c.c}">Sprint ${w} of ${W.length} · Phase ${sp.p} · ${esc(P[sp.p-1].t)}</div>
+   <h2 class="serif eh2" style="margin-top:4px">${esc(sp.t)}</h2>
+   <p class="goal">${esc(sp.g)}</p>
+   <span class="out">🎯 ${esc(sp.o)}</span>
+   <div style="font-size:12.5px;color:var(--mute);margin-top:10px">${fmtD(a,{weekday:"short",day:"numeric",month:"short"})} → ${fmtD(b,{weekday:"short",day:"numeric",month:"short"})}</div>
+   ${statsFor(idx,a,b)}
+   <h3 class="sec">Epics in this sprint</h3><div class="eList">${listFor(a,b)}</div>
+   <div class="pFoot"><button class="btn ghost sm" data-sprint="${w-1}"${w===1?" disabled":""}>← Sprint ${w-1}</button><button class="btn ghost sm" data-sprint="${w+1}"${w===W.length?" disabled":""}>Sprint ${w+1} →</button></div>`;
+ }
+ else if(S.sel.t==="range"){
+  const{a,b}=S.sel,idx=ds.map((k,i)=>k>=a&&k<=b?i:-1).filter(i=>i>=0);
+  const sw=[...new Set(idx.map(i=>D[i].w))];
+  h=`<div class="crumbs"><span>Custom range</span><span class="sep">|</span><button data-clear>Clear selection</button></div>
+   <div class="eyebrow">${idx.length} study day${idx.length===1?"":"s"}${sw.length?` · Sprint ${sw[0]}${sw.length>1?"–"+sw[sw.length-1]:""}`:""}</div>
+   <h2 class="serif eh2" style="margin-top:4px">${fmtD(a,short)} – ${fmtD(b,short)}</h2>
+   ${idx.length?statsFor(idx,a,b)+`<h3 class="sec">Epics in this range</h3><div class="eList">${listFor(a,b)}</div>`:`<p class="goal">No epics fall inside this range. ${holsBetween(a,b).length?"It's covered by festival breaks.":"Try a range inside your plan window."}</p><div class="eList">${listFor(a,b)}</div>`}`;
+ }
+ else{
+  const k=S.sel.k,nextI=ds.findIndex(d=>d>k),prevI=(()=>{let p=-1;ds.forEach((d,i)=>{if(d<k)p=i});return p})();
+  if(isHol(k))h=`<div class="festCard"><div class="eyebrow" style="color:#a8662a">${fmtD(k,{weekday:"long",day:"numeric",month:"long"})}</div><h2 class="serif">✦ ${esc(HOL[k])}</h2><p>Festival break — no epic scheduled. Enjoy the day; the plan already accounts for it.</p></div>`;
+  else if(k>=ds[0]&&k<=ds[N-1])h=`<div class="restCard"><div class="eyebrow">${fmtD(k,{weekday:"long",day:"numeric",month:"long"})}</div><h2 class="serif">Rest day</h2><p>Nothing scheduled. If you're behind, this is a good day to catch up on open tasks.</p></div>`;
+  else h=`<div class="restCard"><div class="eyebrow">${fmtD(k,{weekday:"long",day:"numeric",month:"long"})}</div><h2 class="serif">Outside the plan</h2><p>This date is ${k<ds[0]?"before your start date":"after your finish date"}.</p></div>`;
+  h+=`${nextI>=0?`<h3 class="sec">Next epic</h3><div class="eList">${eItem(nextI,ds,today)}</div>`:""}${prevI>=0?`<h3 class="sec">Previous epic</h3><div class="eList">${eItem(prevI,ds,today)}</div>`:""}`;
+ }
+ el.innerHTML=h;
+}
+
+/* ---- epic detail (shared by Calendar panel and Roadmap) ---- */
+function storyTxt(t){
+ const m=t.match(/^As (an?|the) (.+?), I want (.+), so that (.+)$/);
+ if(!m)return fmtTxt(t);
+ return`<span class="kw">As ${m[1]}</span> ${fmtTxt(m[2])}, <span class="kw">I want</span> ${fmtTxt(m[3])}, <span class="kw">so that</span> ${fmtTxt(m[4])}`;
+}
+function epicHTML(i){
+ const ds=dates(),today=ymd(new Date()),d=D[i],st=status(i,ds,today),s=dayStat(i),id=pad(i+1),c=phOf(d.w);
+ const stories=d.s.map((sto,si)=>{
+  const ks=sto[2],sh=ks.reduce((a,k)=>a+k[1],0),all=ks.every((_,ki)=>S.done[`${i+1}.${si+1}.${ki+1}`]);
+  return`<div class="story${all?" full":""}">
+   <div class="sHead"><span class="sid mono">US-${id}.${si+1}</span><span class="sPts">${ks.length} work packages · ${fh(sh)} h</span></div>
+   <p class="sTxt">${storyTxt(sto[0])}</p>
+   <div class="ac"><div class="acT">Acceptance criteria</div><ul>${sto[1].map(a=>`<li>${fmtTxt(a)}</li>`).join("")}</ul></div>
+   <div class="wRow head"><span></span><span>WBS</span><span>Work package</span><span style="text-align:right">Est.</span></div>
+   ${ks.map((k,ki)=>{const tid=`${i+1}.${si+1}.${ki+1}`,ch=!!S.done[tid];
+    return`<label class="wRow${ch?" done":""}"><input type="checkbox" data-task="${tid}"${ch?" checked":""}><span class="chk"></span><span class="wid mono">${tid}</span><span class="wt">${fmtTxt(k[0])}</span><span class="wh">${fh(k[1])} h</span></label>`}).join("")}
+  </div>`}).join("");
+ const res=d.r.filter(k=>R[k]).map(k=>`<a href="${R[k][1]}" target="_blank" rel="noopener">${esc(R[k][0])}<span>${R[k][1].replace("https://","")} ↗</span></a>`).join("");
+ const complete=s.d===s.n;
+ return`<div class="dMeta"><span class="tag epic mono">EPIC E-${id}</span><span class="tag k-${d.k}">${KIND[d.k]}</span><span class="tag" style="background:${c.s};color:${c.c};border-color:transparent">Sprint ${d.w} · ${esc(W[d.w-1].t)}</span><span class="tag s-${st}">${LABEL[st]}</span><span class="dDate">${fmtD(ds[i],{weekday:"long",day:"numeric",month:"long",year:"numeric"})}</span></div>
+  <h2 class="serif eh2">${esc(d.t)}</h2>
+  <p class="goal">${esc(d.g)}</p>
+  <div class="dProg"><div class="mbar"><i style="width:${s.d/s.n*100}%"></i></div><span>${s.d}/${s.n} tasks · ${fh(s.dh)}/${fh(s.h)} h</span></div>
+  <div class="dod"><b>Definition of done</b><span>${fmtTxt(d.d)}</span></div>
+  <h3 class="sec">User stories & work breakdown</h3>
+  ${stories}
+  <div class="two">
+   <div class="res"><h3 class="sec">Resources</h3>${res}</div>
+   <div><h3 class="sec">Notes & learnings</h3><textarea class="noteBox" data-note="${i+1}" placeholder="What did you learn? What tripped you up? Commands worth remembering…">${esc(S.notes[i+1]||"")}</textarea><div class="saved"></div></div>
+  </div>
+  <div class="dFoot">
+   <button class="btn ghost sm" data-day="${i}"${i===0?" disabled":""}>← E-${pad(i)}</button>
+   <button class="btn sm${complete?" ghost":""}" data-toggle="${i+1}">${complete?"Mark epic incomplete":"Mark epic complete ✓"}</button>
+   <button class="btn ghost sm" data-day="${i+2}"${i===N-1?" disabled":""}>E-${pad(i+2)} →</button>
+  </div>`;
+}
+
+/* ---- roadmap tab ---- */
+function renderRoad(){
+ const ds=dates(),cw=D[S.day-1].w;
+ document.getElementById("road").innerHTML=P.map((p,pi)=>{
+  let pn=0,pd=0;const c=PH[pi%PH.length];
+  const items=W.map((w,wi)=>({w,wi})).filter(x=>x.w.p===pi+1).map(({w,wi})=>{
+   const idx=sprintDays(wi+1),a=agg(idx);pn+=a.n;pd+=a.d;
+   return`<button class="wk${cw===wi+1?" on":""}" data-week="${wi+1}"><div class="wkTop"><span>SPRINT ${wi+1} · ${fmtD(ds[idx[0]],short)} – ${fmtD(ds[idx[idx.length-1]],short)}</span><span>${a.pct}%</span></div><b>${esc(w.t)}</b><div class="mbar"><i style="width:${a.pct}%"></i></div></button>`}).join("");
+  return`<div class="card phase" style="--c:${c.c};--s:${c.s}"><div class="pHead"><span class="eyebrow">Phase ${pi+1}</span><span class="pPct">${pn?Math.round(pd/pn*100):0}%</span></div><h4 class="serif">${esc(p.t)}</h4><p>${esc(p.g)}</p><div class="wks">${items}</div></div>`}).join("");
+}
+function renderDays(){
+ const ds=dates(),today=ymd(new Date()),cw=D[S.day-1].w,w=W[cw-1],idx=sprintDays(cw);
+ const lo=ds[idx[0]],lastI=idx[idx.length-1],hi=lastI<N-1?ds[lastI+1]:ds[lastI];
+ const brk=holsBetween(lo,hi,lastI>=N-1);
+ document.getElementById("wkHead").innerHTML=`<div class="eyebrow">Sprint ${cw} of ${W.length} · Phase ${w.p}</div><h3 class="serif">${esc(w.t)}</h3><p>${esc(w.g)}</p><span class="out">🎯 ${esc(w.o)}</span>${brk.length?`<span class="brk">✦ Breaks: ${brk.map(k=>esc(HOL[k])+" ("+fmtD(k,short)+")").join(", ")}</span>`:""}`;
+ document.getElementById("days").innerHTML=idx.map(i=>{
+  const d=D[i],st=status(i,ds,today),s=dayStat(i);
+  return`<div class="dItem${S.day===i+1?" on":""}" data-day="${i+1}">
+   <div class="dNum ${st}">${st==="done"?"✓":i+1}</div>
+   <div class="dInfo"><b>${esc(d.t)}</b><span>${fmtD(ds[i])} · ${LABEL[st]}${d.k!=="learn"?`<span class="kd k-${d.k}">${KIND[d.k]}</span>`:""}</span></div>
+   <div class="dFrac">${s.d}/${s.n}</div></div>`}).join("");
+}
+function renderDetail(){document.getElementById("detail").innerHTML=epicHTML(S.day-1)}
+
+/* ---- self-test & resources ---- */
+function renderSelf(){
+ const T=SELF.length,n=SELF.filter((_,i)=>S.self[i]).length;
+ document.getElementById("selfList").innerHTML=SELF.map((x,i)=>`<label class="stItem${S.self[i]?" done":""}"><input type="checkbox" data-self="${i}"${S.self[i]?" checked":""}><span class="chk"></span><span class="tx">${esc(x[0])}</span><span class="lnk" data-jump="${x[1]}">E-${pad(x[1])} →</span></label>`).join("");
+ const r=document.getElementById("ready");
+ r.className="ready"+(n===T?" yes":"");
+ r.innerHTML=n===T?`🎉 All ${T} ticked — you're ready to apply.`:`${n}/${T} ticked · ${T-n} to go before you apply.`;
+}
+function renderStatic(){
+ document.getElementById("qList").innerHTML=QS.map(q=>`<details><summary>${esc(q[0])}</summary><div class="ans">${q[1].map(p=>`<p>${p}</p>`).join("")}</div></details>`).join("");
+ const top=[["dev","Themes, Liquid, CLI, APIs, apps"],["liquid","Every object, tag and filter"],["help","Admin topics"],["horizon","Read real, well-written theme code"],["dawn","Classic OS 2.0 reference"],["community","Ask questions when stuck"],["cli","Theme commands & flags"],["custom","Custom data modelling"],["cart","AJAX cart endpoints"],["srapi","Server-rendered HTML for JS"],["perf","Speed best practices"],["a11y","Accessible themes"],["vite","Theme build tooling"],["playwright","End-to-end testing"],["actions","CI/CD pipelines"],["subscriptions","Selling plans in themes"],["flow","No-code automation"],["b2b","Wholesale features"],["gql","Queries & mutations"],["app","Embedded apps"],["ext","App blocks & embeds"],["functions","Backend customisation"],["hydrogen","Headless storefronts"],["mdn","HTML, CSS & JS reference"]];
+ document.getElementById("rList").innerHTML=top.map(([k,s])=>`<a href="${R[k][1]}" target="_blank" rel="noopener"><b>${esc(R[k][0])} ↗</b><span>${esc(s)}</span></a>`).join("");
+ document.getElementById("dsNotes").innerHTML=DS.map((t,i)=>`<div class="note"><i>${i+1}</i><span>${t}</span></div>`).join("");
+ document.getElementById("cli").innerHTML=CLI.map(c=>`<div><code>${esc(c[0])}</code><span>${esc(c[1])}</span></div>`).join("");
+}
+function setTab(t){if(!TABS.includes(t))t="home";S.tab=t;document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("on",b.dataset.tab===t));document.querySelectorAll(".pane").forEach(p=>p.classList.toggle("on",p.id==="pane-"+t));if(t==="test")renderSelf();save()}
+
+/* ============ EVENTS ============ */
+document.addEventListener("click",e=>{
+ const g=s=>e.target.closest(s);let el;
+ if(el=g("[data-tab]")){setTab(el.dataset.tab);return}
+ if(el=g("[data-home]")){setTab("home");selectDay(+el.dataset.home);commit({scrollPanel:true});return}
+ if(el=g("[data-jump]")){e.preventDefault();setTab("home");selectDay(+el.dataset.jump);commit({scrollPanel:true});window.scrollTo({top:0,behavior:"smooth"});return}
+ if(el=g("[data-sprint]")){if(el.disabled)return;selectSprint(+el.dataset.sprint);commit({scrollPanel:true});return}
+ if(el=g("[data-open]")){S.back=(S.sel.t==="sprint"||S.sel.t==="range")?{...S.sel}:null;selectDay(+el.dataset.open);commit({scrollPanel:true});return}
+ if(el=g("[data-back]")){S.sel=S.back;S.back=null;if(S.sel.t==="sprint")S.month=monthOf(dates()[sprintDays(S.sel.w)[0]]);else if(S.sel.t==="range")S.month=monthOf(S.sel.a);commit();return}
+ if(el=g("[data-clear]")){selectDay(S.day);commit();return}
+ if(el=g("[data-month]")){S.month=el.dataset.month;commit({keep:true});return}
+ if(el=g("[data-week]")){const w=+el.dataset.week,fi=focusIdx(dates(),ymd(new Date()));selectDay(D[fi].w===w?fi+1:sprintDays(w)[0]+1);commit();return}
+ if(el=g("[data-day]")){if(el.disabled)return;S.back=null;selectDay(+el.dataset.day);commit({scrollPanel:true});if(S.tab==="road"&&window.innerWidth<920)document.getElementById("detail").scrollIntoView({behavior:"smooth"});return}
+ if(el=g("[data-toggle]")){const n=+el.dataset.toggle,t=tasks(n-1),all=t.every(x=>S.done[x.id]);t.forEach(x=>{if(all)delete S.done[x.id];else S.done[x.id]=true});commit({keep:true});return}
+});
+document.getElementById("mPrev").onclick=()=>{const m=planMonths(),i=m.indexOf(S.month);if(i>0){S.month=m[i-1];commit({keep:true})}};
+document.getElementById("mNext").onclick=()=>{const m=planMonths(),i=m.indexOf(S.month);if(i<m.length-1){S.month=m[i+1];commit({keep:true})}};
+document.getElementById("mToday").onclick=()=>{const today=ymd(new Date()),ds=dates();if(today>=ds[0]&&today<=ds[N-1])selectDate(today);else selectDay(focusIdx(ds,today)+1);commit({scrollPanel:true})};
+document.getElementById("rangeBtn").onclick=()=>{rangeMode=!rangeMode;anchor=null;renderMonth()};
+
+/* calendar pointer interactions: click = date, drag/shift-click = range */
+const MONTH=document.getElementById("month");
+let drag=null,lastPtr="mouse";
+MONTH.addEventListener("pointerdown",e=>{
+ lastPtr=e.pointerType;const c=e.target.closest(".mcell[data-k]");
+ if(!c||e.target.closest(".bar"))return;
+ if(e.pointerType==="mouse"&&e.button===0){drag={a:c.dataset.k,b:c.dataset.k,moved:false,shift:e.shiftKey};e.preventDefault()}
+});
+MONTH.addEventListener("pointerover",e=>{
+ if(!drag)return;const c=e.target.closest(".mcell[data-k]");
+ if(c&&c.dataset.k!==drag.b){drag.b=c.dataset.k;drag.moved=true;paint(drag.a,drag.b);setHint(`Selecting ${fmtD(drag.a<drag.b?drag.a:drag.b,short)} – ${fmtD(drag.a<drag.b?drag.b:drag.a,short)}`)}
+});
+document.addEventListener("pointerup",()=>{
+ if(!drag)return;const d=drag;drag=null;
+ if(d.moved&&d.a!==d.b){setRange(d.a,d.b);commit({scrollPanel:true})}else tapDate(d.a,d.shift);
+});
+MONTH.addEventListener("click",e=>{
+ if(lastPtr==="mouse")return;const c=e.target.closest(".mcell[data-k]");
+ if(!c||e.target.closest(".bar"))return;tapDate(c.dataset.k,false);
+});
+function tapDate(k,shift){
+ if(rangeMode){
+  if(!anchor){anchor=k;paint(k,k);setHint();return}
+  const a=anchor;anchor=null;rangeMode=false;setRange(a,k);commit({scrollPanel:true});return;
+ }
+ if(shift){const from=currentKey();if(from){setRange(from,k);commit({scrollPanel:true});return}}
+ selectDate(k);commit({scrollPanel:true});
+}
+function paint(a,b){if(a>b)[a,b]=[b,a];MONTH.querySelectorAll(".mcell[data-k]").forEach(c=>c.classList.toggle("insel",c.dataset.k>=a&&c.dataset.k<=b))}
+
+document.addEventListener("keydown",e=>{
+ if(S.tab!=="home")return;
+ const tag=(document.activeElement&&document.activeElement.tagName)||"";
+ if(/INPUT|TEXTAREA|SELECT/.test(tag))return;
+ if(e.key==="ArrowRight"||e.key==="ArrowLeft"){
+  const dir=e.key==="ArrowRight"?1:-1;
+  let n;if(S.sel.t==="day")n=S.day+dir;else{const k=S.sel.t==="date"?S.sel.k:(selBounds()||{a:dates()[S.day-1]}).a,ds=dates();n=dir>0?ds.findIndex(d=>d>=k)+1:(()=>{let p=1;ds.forEach((d,i)=>{if(d<=k)p=i+1});return p})()}
+  if(n<1||n>N)return;S.back=null;selectDay(n);commit();e.preventDefault();
+ }
+ if(e.key==="Escape"){rangeMode=false;anchor=null;if(S.sel.t!=="day")selectDay(S.day);commit()}
+});
+
+document.addEventListener("change",e=>{
+ const t=e.target;
+ if(t.dataset.task){if(t.checked)S.done[t.dataset.task]=true;else delete S.done[t.dataset.task];commit({keep:true})}
+ else if(t.dataset.self!==undefined){if(t.checked)S.self[t.dataset.self]=true;else delete S.self[t.dataset.self];renderSelf();save()}
+ else if(t.id==="start"&&t.value){S.start=t.value;selectDay(S.day);commit()}
+ else if(t.id==="mode"){S.mode=t.value;selectDay(S.day);commit()}
+ else if(t.id==="hol"){S.hol=t.value;selectDay(S.day);commit()}
+});
+let noteT;
+document.addEventListener("input",e=>{
+ const t=e.target;if(!t.classList.contains("noteBox"))return;
+ S.notes[t.dataset.note]=t.value;save();
+ const sv=t.parentElement.querySelector(".saved");sv.textContent="Saving…";clearTimeout(noteT);noteT=setTimeout(()=>{sv.textContent="Saved ✓"},500);
+});
+let resetArm=null;
+document.getElementById("reset").addEventListener("click",ev=>{
+ const b=ev.currentTarget;
+ if(!resetArm){b.textContent="Click again to confirm";b.classList.add("warn");resetArm=setTimeout(()=>{b.textContent="Reset progress";b.classList.remove("warn");resetArm=null},3000);return}
+ clearTimeout(resetArm);resetArm=null;b.textContent="Reset progress";b.classList.remove("warn");
+ S.done={};S.notes={};S.self={};commit({keep:true});renderSelf();
+});
+
+/* ============ INIT ============ */
+(async function(){
+ const flash=m=>{const b=document.getElementById("importBtn");b.textContent=m;setTimeout(()=>b.textContent="Restore",2200)};
+ document.getElementById("exportBtn").onclick=()=>{
+  const blob=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=`shopify-roadmap-progress-${ymd(new Date())}.json`;
+  document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ };
+ document.getElementById("importBtn").onclick=()=>document.getElementById("importFile").click();
+ document.getElementById("importFile").onchange=async e=>{
+  const f=e.target.files[0];if(!f)return;
+  try{const data=JSON.parse(await f.text());if(!data||typeof data!=="object"||typeof data.done!=="object")throw new Error("bad file");
+   Object.assign(S,data);normalise();
+   document.getElementById("start").value=S.start;document.getElementById("mode").value=S.mode;document.getElementById("hol").value=S.hol;
+   commit();renderSelf();setTab(S.tab);flash("Restored ✓");
+  }catch(err){flash("Invalid file")}
+  e.target.value="";
+ };
+ try{const v=await store.get();if(v)Object.assign(S,JSON.parse(v))}catch(e){/* first run */}
+ normalise();
+ document.getElementById("start").value=S.start;
+ document.getElementById("mode").value=S.mode;
+ document.getElementById("hol").value=S.hol;
+ renderStatic();render();renderSelf();setTab(S.tab);
+ const l=document.getElementById("loader");l.style.opacity=0;setTimeout(()=>l.remove(),300);
+})();
+function normalise(){
+ if(!S.hol)S.hol="1";
+ if(!TABS.includes(S.tab))S.tab="home";
+ if(!S.day||S.day>N)S.day=focusIdx(dates(),ymd(new Date()))+1;
+ const ok=S.sel&&((S.sel.t==="day")||(S.sel.t==="sprint"&&S.sel.w>=1&&S.sel.w<=W.length)||(S.sel.t==="range"&&S.sel.a&&S.sel.b)||(S.sel.t==="date"&&S.sel.k));
+ if(!ok){S.sel={t:"day"}}
+ S.back=null;
+ if(!S.month)S.month=monthOf(dates()[S.day-1]);
+}
+</script>
+</body>
+</html>
